@@ -1,5 +1,7 @@
 Wechat Database Browser
 
+**<font color=red>Support Wechat 7.0!!</font>**
+
 - - -
 
 Help for reading the data in Wechat. Now supported:
