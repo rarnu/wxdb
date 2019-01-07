@@ -1,0 +1,71 @@
+Uin
+
+```kotlin
+fun getUin(): String {
+    var str = // read file "auth_info_key_prefs.xml"
+    str = str.substring(str.indexOf("_auth_uin"))
+    str = str.substring(0, str.indexOf("/>"))
+    str = str.replace("_auth_uin", "").replace("value=", "")
+    str = str.replace("\"", "").trim()
+    return str
+}
+```
+
+Device Id
+
+```kotlin
+fun loadDeviceId(): String {
+    val fDev = File("CompatibleInfo.cfg")
+    var str: String? = ""
+    try {
+        val ois = ObjectInputStream(FileInputStream(fDev))
+        @Suppress("UNCHECKED_CAST")
+        val map = ois.readObject() as Map<Int, String>
+        str = map[258]
+        ois.close()
+    } catch (e: Throwable) {
+
+    }
+    if (str == null || str == "") {
+        str = "1234567890ABCDEF"
+    }
+    return str
+}
+```
+
+Account
+
+```kotlin
+fun getLoginAccount(): String {
+    var str = // read file "notify_key_pref_no_account.xml"
+    str = str.substring(str.indexOf("login_weixin_username"))
+    str = str.substring(0, str.indexOf("</"))
+    str = str.replace("login_weixin_username", "")
+    str = str.replace("\"", "").replace(">", "").trim()
+    return str
+}
+```
+
+User Folder
+
+```kotlin
+val uin = // getUin()
+val userFolder = md5("mm$uin")
+```
+
+Password for ```EnMicroMsg.db```
+
+```kotlin
+val did = // loadDeviceId()
+val uin = // getUin()
+val pwd = md5(did + uin).substring(0, 7).toLowerCase()
+```
+
+Password for ```FTS5IndexMicroMsg_encrypt.db```
+
+```kotlin
+val uin = // getUin()
+val did = // loadDeviceId()
+val acc = // getLoginAccount()
+val pwd = md5(uin + did + acc).substring(0, 7).toLowerCase()
+```

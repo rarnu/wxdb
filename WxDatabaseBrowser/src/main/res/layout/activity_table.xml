@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <Spinner
+            android:id="@+id/spTable"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:scrollbars="none"
+    />
+    <RelativeLayout
+            android:id="@+id/layTable"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:layout_below="@+id/spTable"
+            android:layout_above="@+id/layBottom">
+
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/layBottom"
+            android:layout_width="match_parent" android:layout_height="40dip"
+            android:layout_alignParentBottom="true">
+        <Button
+                android:id="@+id/btnFirstPage"
+                android:layout_width="75dip" android:layout_height="match_parent"
+                android:text="@string/btn_first_page"
+                android:background="@null"/>
+        <Button
+                android:id="@+id/btnPriorPage"
+                android:layout_width="75dip" android:layout_height="match_parent"
+                android:text="@string/btn_prior_page"
+                android:layout_toRightOf="@+id/btnFirstPage"
+                android:background="@null"/>
+
+        <Button
+                android:id="@+id/btnLastPage"
+                android:layout_width="75dip" android:layout_height="match_parent"
+                android:text="@string/btn_last_page"
+                android:background="@null"
+                android:layout_alignParentRight="true"/>
+        <Button
+                android:id="@+id/btnNextPage"
+                android:layout_width="75dip" android:layout_height="match_parent"
+                android:text="@string/btn_next_page"
+                android:background="@null"
+                android:layout_toLeftOf="@+id/btnLastPage"/>
+        <TextView
+                android:id="@+id/tvPage"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/btnPriorPage"
+                android:layout_toLeftOf="@+id/btnNextPage"
+                android:gravity="center"/>
+
+        <Button
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:text="@string/btn_exit_sql_mode"
+                android:background="@null"
+                android:visibility="gone"/>
+
+    </RelativeLayout>
+</RelativeLayout>

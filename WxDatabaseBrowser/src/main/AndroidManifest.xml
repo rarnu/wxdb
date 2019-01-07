@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.rarnu.wxdb.browser"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="26"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher"
+                 android:theme="@android:style/Theme.Material.Light.DarkActionBar">
+        <activity android:name="MainActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".BaseInfoActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".AlgorithmActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".TableActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".SQLActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity android:name=".SnsActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".SnsDetailActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".AboutActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+    </application>
+</manifest>

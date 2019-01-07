@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WxDatabase</string>
+
+    <string name="title_refresh_data">Refresh Data</string>
+    <string name="title_base_info">Base Information</string>
+    <string name="title_micro_msg">EnMicroMsg.db</string>
+    <string name="title_index">FTS5IndexMicroMsg_encrypt.db</string>
+    <string name="title_sns">SnsMicroMsg.db</string>
+    <string name="title_algorithm">Algorithm</string>
+    <string name="title_info">Information</string>
+    <string name="title_table">Table</string>
+    <string name="title_uin">Uin</string>
+    <string name="title_did">DeviceId</string>
+    <string name="title_wxid">Account</string>
+    <string name="title_en_pwd">Password for EnMicroMsg</string>
+    <string name="title_index_pwd">Password for IndexMicroMsg</string>
+    <string name="title_user_folder">User Folder</string>
+    <string name="title_sns_detail">SNS Detail</string>
+
+    <string name="key_refresh_data">key_refresh_data</string>
+    <string name="key_base_info">key_base_info</string>
+    <string name="key_micro_msg">key_micro_msg</string>
+    <string name="key_index">key_index</string>
+    <string name="key_sns">key_sns</string>
+    <string name="key_algorithm">key_algorithm</string>
+    <string name="key_uin">key_uin</string>
+    <string name="key_did">key_did</string>
+    <string name="key_wxid">key_wxid</string>
+    <string name="key_en_pwd">key_en_pwd</string>
+    <string name="key_index_pwd">key_index_pwd</string>
+    <string name="key_user_folder">key_user_folder</string>
+
+    <string name="summary_in_processing">In Processing...</string>
+
+    <string name="toast_no_root">Device must be rooted before use the application.</string>
+
+    <string name="btn_first_page">First</string>
+    <string name="btn_last_page">Last</string>
+    <string name="btn_prior_page">Prior</string>
+    <string name="btn_next_page">Next</string>
+    <string name="btn_exit_sql_mode">Exit SQL Mode</string>
+    <string name="btn_ok">OK</string>
+
+    <string name="text_comment">Comment</string>
+    <string name="text_like">Like</string>
+
+    <string name="menu_info">Information</string>
+    <string name="menu_sql">SQL</string>
+    <string name="menu_sns">SNS</string>
+    <string name="menu_exec_sql">Execute SQL</string>
+
+
+</resources>

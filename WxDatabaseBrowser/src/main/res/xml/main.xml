@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference android:key="@string/key_refresh_data" android:title="@string/title_refresh_data"/>
+
+    <PreferenceCategory android:title="@string/title_info">
+        <Preference android:key="@string/key_base_info" android:title="@string/title_base_info"/>
+        <Preference android:key="@string/key_algorithm" android:title="@string/title_algorithm"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title_table">
+        <Preference android:key="@string/key_micro_msg" android:title="@string/title_micro_msg"/>
+        <Preference android:key="@string/key_index" android:title="@string/title_index"/>
+        <Preference android:key="@string/key_sns" android:title="@string/title_sns"/>
+    </PreferenceCategory>
+</PreferenceScreen>

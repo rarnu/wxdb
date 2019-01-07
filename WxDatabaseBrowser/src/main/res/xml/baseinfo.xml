@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <Preference android:key="@string/key_uin" android:title="@string/title_uin"/>
+    <Preference android:key="@string/key_did" android:title="@string/title_did"/>
+    <Preference android:key="@string/key_wxid" android:title="@string/title_wxid"/>
+    <Preference android:key="@string/key_en_pwd" android:title="@string/title_en_pwd"/>
+    <Preference android:key="@string/key_index_pwd" android:title="@string/title_index_pwd"/>
+    <Preference android:key="@string/key_user_folder" android:title="@string/title_user_folder"/>
+</PreferenceScreen>

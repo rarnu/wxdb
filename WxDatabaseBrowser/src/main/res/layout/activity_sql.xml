@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/tvSelect"
+            android:layout_width="match_parent" android:layout_height="40dip"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="4dip"/>
+
+    <View
+            android:id="@+id/vline"
+            android:layout_width="match_parent" android:layout_height="1px"
+            android:layout_below="@+id/tvSelect" android:background="@android:color/darker_gray"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:layout_below="@+id/vline"
+                  android:weightSum="3">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0px"
+                        android:layout_weight="2">
+            <EditText
+                    android:id="@+id/etSQLWhere"
+                    android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:layout_above="@+id/layOrderBy"
+                    android:scrollbars="none"
+                    android:gravity="left|top"/>
+
+            <LinearLayout
+                    android:id="@+id/layOrderBy"
+                    android:layout_width="match_parent" android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true">
+                <CheckBox
+                        android:id="@+id/chkOrderBy"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dip"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                          android:gravity="left|center_vertical"
+                          android:paddingLeft="4dip"
+                          android:paddingRight="4dip"
+                          android:text="ORDER BY"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                              android:orientation="horizontal" android:weightSum="3">
+
+                    <Spinner
+                            android:id="@+id/spField"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:scrollbars="none"
+                    />
+                    <Spinner
+                            android:id="@+id/spOrder"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scrollbars="none"
+                    />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0px"
+                      android:layout_weight="1" android:orientation="horizontal"
+                      android:weightSum="2"
+                      android:paddingTop="1px"
+                      android:background="@android:color/darker_gray">
+            <ListView
+                    android:id="@+id/lvField"
+                    android:layout_width="0px" android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:scrollbars="none"/>
+
+            <LinearLayout android:layout_width="0px" android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="vertical"
+                          android:background="@android:color/white"
+                          android:layout_marginLeft="1px">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="0px"
+                              android:layout_weight="1"
+                              android:orientation="horizontal">
+                    <Button
+                            android:id="@+id/btnSQLAnd"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:text="AND"/>
+                    <Button
+                            android:id="@+id/btnSQLOr"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:text="OR"/>
+                    <Button
+                            android:id="@+id/btnSQLBrackets"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:text="(  )"/>
+                    <Button
+                            android:id="@+id/btnSQLQuote"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:text="'  '"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="0px"
+                              android:layout_weight="1"
+                              android:orientation="horizontal">
+                    <Button
+                            android:id="@+id/btnSQLEqual"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:text="="/>
+
+                    <Button
+                            android:id="@+id/btnSQLLT"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:text="&lt;"/>
+                    <Button
+                            android:id="@+id/btnSQLGT"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:text="&gt;"/>
+                    <Button
+                            android:id="@+id/btnSQLPercent"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:text="%"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="0px"
+                              android:layout_weight="1"
+                              android:orientation="horizontal">
+                    <Button
+                            android:id="@+id/btnSQLBet"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:textSize="12sp"
+                            android:text="BET"/>
+
+                    <Button
+                            android:id="@+id/btnSQLIn"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:textSize="12sp"
+                            android:text="IN"/>
+                    <Button
+                            android:id="@+id/btnSQLNotIn"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:textSize="12sp"
+                            android:text="NOTIN"/>
+                    <Button
+                            android:id="@+id/btnSQLLike"
+                            android:layout_width="0px" android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:textSize="12sp"
+                            android:text="LIKE"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

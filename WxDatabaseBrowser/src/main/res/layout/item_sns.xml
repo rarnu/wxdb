@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="48dip"
+              android:orientation="vertical"
+              android:paddingLeft="4dip"
+              android:paddingRight="4dip">
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="1">
+        <TextView
+                android:id="@+id/tvCommentCount"
+                android:layout_width="40dip" android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:textSize="12sp"
+
+                android:layout_alignParentRight="true"/>
+        <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="60dip" android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:text="@string/text_comment"
+                android:textSize="12sp"
+                android:layout_toLeftOf="@+id/tvCommentCount"/>
+        <TextView
+                android:id="@+id/tvLikeCount"
+                android:layout_width="40dip" android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:textSize="12sp"
+                android:layout_toLeftOf="@+id/tvComment"/>
+        <TextView
+                android:id="@+id/tvLike"
+                android:layout_width="60dip" android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:text="@string/text_like"
+                android:textSize="12sp"
+                android:layout_toLeftOf="@+id/tvLikeCount"/>
+        <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/tvLike"
+                android:gravity="left|center_vertical"
+                android:textSize="12sp"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="1">
+        <TextView
+                android:id="@+id/tvSnsContent"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:ellipsize="end"/>
+    </RelativeLayout>
+
+</LinearLayout>
