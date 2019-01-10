@@ -15,6 +15,7 @@ class BaseInfoActivity: PreferenceActivity() {
     private lateinit var prefWxid: Preference
     private lateinit var prefEnPwd: Preference
     private lateinit var prefIndexPwd: Preference
+    private lateinit var prefPriorityPwd: Preference
     private lateinit var prefUserFolder: Preference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,12 +32,14 @@ class BaseInfoActivity: PreferenceActivity() {
         prefWxid = pref(R.string.key_wxid)
         prefEnPwd = pref(R.string.key_en_pwd)
         prefIndexPwd = pref(R.string.key_index_pwd)
+        prefPriorityPwd = pref(R.string.key_priority_pwd)
         prefUserFolder = pref(R.string.key_user_folder)
         prefUin.summary = Alg.getUin()
         prefDid.summary = Alg.loadDeviceId()
         prefWxid.summary = Alg.getLoginAccount()
         prefEnPwd.summary = Alg.getEnMicroMsgPassword()
         prefIndexPwd.summary = Alg.getIndexMicroMsgPassword()
+        prefPriorityPwd.summary = Alg.getPriorityPassword()
         prefUserFolder.summary = Alg.getUserFolder()
     }
 

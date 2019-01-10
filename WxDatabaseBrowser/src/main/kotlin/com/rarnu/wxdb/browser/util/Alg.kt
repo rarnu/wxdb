@@ -57,6 +57,14 @@ object Alg {
         return md5.substring(0, 7).toLowerCase()
     }
 
+    fun getPriorityPassword(): String {
+        val did = loadDeviceId()
+        val uin = getUin()
+        val acc = getLoginAccount()
+        val md5 = Utils.md5Encode(uin + acc + did)
+        return md5.substring(0, 7).toLowerCase()
+    }
+
     fun getUserFolder(): String {
         val uin = getUin()
         val md5 = Utils.md5Encode("mm$uin")

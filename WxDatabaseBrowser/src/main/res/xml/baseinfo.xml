@@ -7,5 +7,6 @@
     <Preference android:key="@string/key_wxid" android:title="@string/title_wxid"/>
     <Preference android:key="@string/key_en_pwd" android:title="@string/title_en_pwd"/>
     <Preference android:key="@string/key_index_pwd" android:title="@string/title_index_pwd"/>
+    <Preference android:key="@string/key_priority_pwd" android:title="@string/title_priority_pwd"/>
     <Preference android:key="@string/key_user_folder" android:title="@string/title_user_folder"/>
 </PreferenceScreen>

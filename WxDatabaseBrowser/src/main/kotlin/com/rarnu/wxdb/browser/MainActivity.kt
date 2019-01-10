@@ -157,15 +157,15 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
             }
             resStr(R.string.key_base_info) -> startActivity(Intent(this, BaseInfoActivity::class.java))
             resStr(R.string.key_algorithm) -> startActivity(Intent(this, AlgorithmActivity::class.java))
-            resStr(R.string.key_micro_msg) -> showData("EnMicroMsg")
-            resStr(R.string.key_index) -> showData("IndexMicroMsg")
-            resStr(R.string.key_sns) -> showData("SnsMicroMsg")
-            resStr(R.string.key_aux_data) -> showData("AuxData")
-            resStr(R.string.key_common_one) -> showData("CommonOne")
-            resStr(R.string.key_story) -> showData("Story")
+            resStr(R.string.key_micro_msg) -> showData("EnMicroMsg")                        // done
+            resStr(R.string.key_index) -> showData("IndexMicroMsg")                         // done
+            resStr(R.string.key_sns) -> showData("SnsMicroMsg")                             // done
+            resStr(R.string.key_aux_data) -> showData("AuxData")                            // done
+            resStr(R.string.key_common_one) -> showData("CommonOne")                        // done
+            resStr(R.string.key_story) -> showData("Story")                                 // done
             resStr(R.string.key_app_brand_comm) -> showData("AppBrandComm")
             resStr(R.string.key_favorite) -> showData("Favorite")
-            resStr(R.string.key_priority) -> showData("Priority")
+            resStr(R.string.key_priority) -> showData("Priority")                           // done
             resStr(R.string.key_wxexpt) -> showData("WxExpt")
             resStr(R.string.key_wxfile_index) -> showData("WxFileIndex")
         }

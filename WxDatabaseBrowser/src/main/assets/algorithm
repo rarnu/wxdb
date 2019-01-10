@@ -69,3 +69,13 @@ val did = // loadDeviceId()
 val acc = // getLoginAccount()
 val pwd = md5(uin + did + acc).substring(0, 7).toLowerCase()
 ```
+
+Password for ```MicroMsgPriority.db```
+
+```kotlin
+val uin = // getUin()
+val did = // loadDeviceId()
+val acc = // getLoginAccount()
+val pwd = md5(uin + acc + did).substring(0, 7).toLowerCase()
+```
+

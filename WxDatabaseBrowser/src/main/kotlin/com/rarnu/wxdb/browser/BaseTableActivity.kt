@@ -9,16 +9,14 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
-import com.rarnu.kt.android.BaseAdapter
-import com.rarnu.kt.android.resStr
-import com.rarnu.kt.android.runOnMainThread
-import com.rarnu.kt.android.showActionBack
+import com.rarnu.kt.android.*
 import com.rarnu.wxdb.browser.database.DbIntf
 import com.rarnu.wxdb.browser.database.FieldData
 import com.rarnu.wxdb.browser.grid.WxGridAdapter
 import com.rarnu.wxdb.browser.grid.WxGridView
 import kotlinx.android.synthetic.main.activity_table.*
 import kotlinx.android.synthetic.main.item_table.view.*
+import java.nio.charset.Charset
 import kotlin.concurrent.thread
 
 abstract class BaseTableActivity : Activity(), AdapterView.OnItemSelectedListener, WxGridAdapter.WxGridListener {
@@ -258,8 +256,22 @@ abstract class BaseTableActivity : Activity(), AdapterView.OnItemSelectedListene
         return result
     }
 
-    override fun onWxGridClick(row: Int, col: Int, data: FieldData) {
 
+    open fun showStringData(row: Int, col: Int, str: String) {
+        alert("$currentTableName [$row, $col]", str, resStr(R.string.btn_ok)) { }
+    }
+
+    open fun showBlobData(row: Int, col: Int, blob: ByteArray) {
+        val str = blob.toString(Charset.defaultCharset())
+        alert("$currentTableName [$row, $col]", str, resStr(R.string.btn_ok)) { }
+    }
+
+    override fun onWxGridClick(row: Int, col: Int, data: FieldData) {
+        if (!data.isBlob && data.str.trim() != "") {
+            showStringData(row, col, data.str)
+        } else if (data.isBlob && data.blob != null) {
+            showBlobData(row, col, data.blob!!)
+        }
     }
 
     private fun switchSQLMode(sqlMode: Boolean) {

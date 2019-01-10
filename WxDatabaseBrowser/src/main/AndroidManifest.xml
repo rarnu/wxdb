@@ -58,5 +58,9 @@
                   android:screenOrientation="portrait">
 
         </activity>
+        <activity android:name=".dbui.PriorityActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
     </application>
 </manifest>
