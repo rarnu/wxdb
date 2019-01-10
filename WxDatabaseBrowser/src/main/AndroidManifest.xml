@@ -62,5 +62,21 @@
                   android:screenOrientation="portrait">
 
         </activity>
+        <activity android:name=".dbui.AppBrandCommActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".dbui.WxExptActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".dbui.WxFileIndexActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".dbui.FavoriteActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
     </application>
 </manifest>

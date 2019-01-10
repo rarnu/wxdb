@@ -163,11 +163,11 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
             resStr(R.string.key_aux_data) -> showData("AuxData")                            // done
             resStr(R.string.key_common_one) -> showData("CommonOne")                        // done
             resStr(R.string.key_story) -> showData("Story")                                 // done
-            resStr(R.string.key_app_brand_comm) -> showData("AppBrandComm")
+            resStr(R.string.key_app_brand_comm) -> showData("AppBrandComm")                 // done
             resStr(R.string.key_favorite) -> showData("Favorite")
             resStr(R.string.key_priority) -> showData("Priority")                           // done
-            resStr(R.string.key_wxexpt) -> showData("WxExpt")
-            resStr(R.string.key_wxfile_index) -> showData("WxFileIndex")
+            resStr(R.string.key_wxexpt) -> showData("WxExpt")                               // done
+            resStr(R.string.key_wxfile_index) -> showData("WxFileIndex")                    // done
         }
         return true
     }

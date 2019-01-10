@@ -38,8 +38,10 @@ abstract class DbIntf(pwd: String? = null) {
         }
         if (c != null) {
             c.moveToFirst()
-            while (c.moveToNext()) {
-                list.add(c.getString(0))
+            if (c.count > 0) {
+                do {
+                    list.add(c.getString(0))
+                } while (c.moveToNext())
             }
             c.close()
         }

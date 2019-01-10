@@ -21,9 +21,10 @@
     <string name="title_uin">Uin</string>
     <string name="title_did">DeviceId</string>
     <string name="title_wxid">Account</string>
-    <string name="title_en_pwd">Password for EnMicroMsg</string>
+    <string name="title_en_pwd">Password for Common Databases</string>
     <string name="title_index_pwd">Password for IndexMicroMsg</string>
     <string name="title_priority_pwd">Password for MicroMsgPriority</string>
+    <string name="title_app_brand_comm_pwd">Password for AppBrandComm</string>
     <string name="title_user_folder">User Folder</string>
     <string name="title_sns_detail">SNS Detail</string>
 
@@ -47,6 +48,7 @@
     <string name="key_en_pwd">key_en_pwd</string>
     <string name="key_index_pwd">key_index_pwd</string>
     <string name="key_priority_pwd">key_priority_pwd</string>
+    <string name="key_app_brand_comm_pwd">key_app_brand_comm_pwd</string>
     <string name="key_user_folder">key_user_folder</string>
 
     <string name="summary_in_processing">In Processing...</string>
