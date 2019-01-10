@@ -46,5 +46,17 @@
                   android:screenOrientation="portrait">
 
         </activity>
+        <activity android:name=".dbui.AuxDataActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".dbui.CommonOneActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".dbui.StoryActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
     </application>
 </manifest>

@@ -23,9 +23,19 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
     private lateinit var prefRefreshData: Preference
     private lateinit var prefBaseInfo: Preference
     private lateinit var prefAlgorithm: Preference
+
+    // db entry
     private lateinit var prefMicroMsg: Preference
     private lateinit var prefIndex: Preference
     private lateinit var prefSns: Preference
+    private lateinit var prefAuxData: Preference
+    private lateinit var prefCommonOne: Preference
+    private lateinit var prefStory: Preference
+    private lateinit var prefAppBrandComm: Preference
+    private lateinit var prefFavorite: Preference
+    private lateinit var prefPriority: Preference
+    private lateinit var prefWxExpt: Preference
+    private lateinit var prefWxFileIndex: Preference
 
     private val menuInfo = Menu.FIRST + 9
 
@@ -43,16 +53,34 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
         prefRefreshData = pref(R.string.key_refresh_data)
         prefBaseInfo = pref(R.string.key_base_info)
         prefAlgorithm = pref(R.string.key_algorithm)
+
         prefMicroMsg = pref(R.string.key_micro_msg)
         prefIndex= pref(R.string.key_index)
         prefSns= pref(R.string.key_sns)
+        prefAuxData = pref(R.string.key_aux_data)
+        prefCommonOne = pref(R.string.key_common_one)
+        prefStory = pref(R.string.key_story)
+        prefAppBrandComm = pref(R.string.key_app_brand_comm)
+        prefFavorite = pref(R.string.key_favorite)
+        prefPriority = pref(R.string.key_priority)
+        prefWxExpt = pref(R.string.key_wxexpt)
+        prefWxFileIndex = pref(R.string.key_wxfile_index)
 
         prefRefreshData.onPreferenceClickListener = this
         prefBaseInfo.onPreferenceClickListener = this
         prefAlgorithm.onPreferenceClickListener = this
+
         prefMicroMsg.onPreferenceClickListener = this
         prefIndex.onPreferenceClickListener = this
         prefSns.onPreferenceClickListener = this
+        prefAuxData.onPreferenceClickListener = this
+        prefCommonOne.onPreferenceClickListener = this
+        prefStory.onPreferenceClickListener = this
+        prefAppBrandComm.onPreferenceClickListener = this
+        prefFavorite.onPreferenceClickListener = this
+        prefPriority.onPreferenceClickListener = this
+        prefWxExpt.onPreferenceClickListener = this
+        prefWxFileIndex.onPreferenceClickListener = this
 
         switchState(false)
 
@@ -132,6 +160,14 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
             resStr(R.string.key_micro_msg) -> showData("EnMicroMsg")
             resStr(R.string.key_index) -> showData("IndexMicroMsg")
             resStr(R.string.key_sns) -> showData("SnsMicroMsg")
+            resStr(R.string.key_aux_data) -> showData("AuxData")
+            resStr(R.string.key_common_one) -> showData("CommonOne")
+            resStr(R.string.key_story) -> showData("Story")
+            resStr(R.string.key_app_brand_comm) -> showData("AppBrandComm")
+            resStr(R.string.key_favorite) -> showData("Favorite")
+            resStr(R.string.key_priority) -> showData("Priority")
+            resStr(R.string.key_wxexpt) -> showData("WxExpt")
+            resStr(R.string.key_wxfile_index) -> showData("WxFileIndex")
         }
         return true
     }

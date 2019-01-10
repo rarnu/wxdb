@@ -2,13 +2,7 @@ Wechat Database Browser
 
 - - -
 
-Help for reading the data in Wechat. Now supported:
-
-* EnMicroMsg.db
-
-* FTS5IndexMicroMsg_encrypt.db
-
-* SnsMicroMsg.db
+Help for reading the data in Wechat.
 
 - - -
 
