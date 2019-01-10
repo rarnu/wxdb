@@ -4,9 +4,17 @@
 
     <string name="title_refresh_data">Refresh Data</string>
     <string name="title_base_info">Base Information</string>
+    <string name="title_app_brand_comm">AppBrandComm.db</string>
+    <string name="title_aux_data">AuxData.db</string>
+    <string name="title_common_one">CommonOneMicroMsg.db</string>
+    <string name="title_favorite">enFavorite.db</string>
     <string name="title_micro_msg">EnMicroMsg.db</string>
     <string name="title_index">FTS5IndexMicroMsg_encrypt.db</string>
+    <string name="title_priority">MicroMsgPriority.db</string>
     <string name="title_sns">SnsMicroMsg.db</string>
+    <string name="title_story">StoryMicroMsg.db</string>
+    <string name="title_wxexpt">WxExpt.db</string>
+    <string name="title_wxfile_index">WxFileIndex.db</string>
     <string name="title_algorithm">Algorithm</string>
     <string name="title_info">Information</string>
     <string name="title_table">Table</string>
@@ -20,9 +28,17 @@
 
     <string name="key_refresh_data">key_refresh_data</string>
     <string name="key_base_info">key_base_info</string>
+    <string name="key_app_brand_comm">key_app_brand_comm</string>
+    <string name="key_aux_data">key_aux_data</string>
+    <string name="key_common_one">key_common_one</string>
+    <string name="key_favorite">key_favorite</string>
     <string name="key_micro_msg">key_micro_msg</string>
     <string name="key_index">key_index</string>
+    <string name="key_priority">key_priority</string>
     <string name="key_sns">key_sns</string>
+    <string name="key_story">key_story</string>
+    <string name="key_wxexpt">key_wxecpt</string>
+    <string name="key_wxfile_index">key_wxfile_index</string>
     <string name="key_algorithm">key_algorithm</string>
     <string name="key_uin">key_uin</string>
     <string name="key_did">key_did</string>

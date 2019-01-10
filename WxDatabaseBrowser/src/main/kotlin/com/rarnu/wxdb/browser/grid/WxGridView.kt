@@ -5,10 +5,11 @@ import android.view.ViewGroup
 import android.widget.HorizontalScrollView
 import android.widget.LinearLayout
 import android.widget.ListView
+import com.rarnu.wxdb.browser.database.FieldData
 
 class WxGridView(context: Context) : HorizontalScrollView(context) {
 
-    private val list = mutableListOf<List<String>>()
+    private val list = mutableListOf<List<FieldData>>()
     private val adapter: WxGridAdapter
     var listener: WxGridAdapter.WxGridListener? = null
         set(value) {
@@ -33,7 +34,7 @@ class WxGridView(context: Context) : HorizontalScrollView(context) {
         lv.adapter = adapter
     }
 
-    fun setItems(l: MutableList<List<String>>) {
+    fun setItems(l: MutableList<List<FieldData>>) {
         list.clear()
         list.addAll(l)
         adapter.notifyDataSetChanged()

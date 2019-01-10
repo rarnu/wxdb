@@ -12,11 +12,12 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.rarnu.kt.android.dip2px
 import com.rarnu.wxdb.browser.R
+import com.rarnu.wxdb.browser.database.FieldData
 
-class WxGridAdapter(ctx: Context, lst: MutableList<List<String>>): BaseAdapter() {
+class WxGridAdapter(ctx: Context, lst: MutableList<List<FieldData>>): BaseAdapter() {
 
     interface WxGridListener {
-        fun onWxGridClick(row: Int, col: Int, isBlob: Boolean, text: String)
+        fun onWxGridClick(row: Int, col: Int, data: FieldData)
     }
 
     private val context = ctx
@@ -46,7 +47,7 @@ class WxGridAdapter(ctx: Context, lst: MutableList<List<String>>): BaseAdapter()
 
     inner class WxGridHolder(v: View) {
         private val baseLayout = v as LinearLayout
-        fun setCell(list: List<String>, position: Int) {
+        fun setCell(list: List<FieldData>, position: Int) {
             baseLayout.removeAllViews()
             for (i in 0 until list.size) {
                 val txt = TextView(context)
@@ -60,11 +61,11 @@ class WxGridAdapter(ctx: Context, lst: MutableList<List<String>>): BaseAdapter()
                 txt.setPadding(2.dip2px(), 0, 2.dip2px(), 0)
                 txt.setBackgroundColor(if (position == 0) Color.LTGRAY else Color.WHITE)
                 txt.paint.isFakeBoldText = position == 0
-                txt.text = list[i]
+                txt.text = if (list[i].isBlob) "[BLOB]" else list[i].str
                 txt.isClickable = true
                 txt.setOnClickListener {
                     if (position > 0) {
-                        listener?.onWxGridClick(position, i, (list[i] == "[BLOB]"), list[i])
+                        listener?.onWxGridClick(position, i, list[i])
                     }
                 }
                 baseLayout.addView(txt)

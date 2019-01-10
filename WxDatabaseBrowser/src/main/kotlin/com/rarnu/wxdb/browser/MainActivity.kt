@@ -129,20 +129,18 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
             }
             resStr(R.string.key_base_info) -> startActivity(Intent(this, BaseInfoActivity::class.java))
             resStr(R.string.key_algorithm) -> startActivity(Intent(this, AlgorithmActivity::class.java))
-            resStr(R.string.key_micro_msg) -> showData(0)
-            resStr(R.string.key_index) -> showData(1)
-            resStr(R.string.key_sns) -> showData(2)
+            resStr(R.string.key_micro_msg) -> showData("EnMicroMsg")
+            resStr(R.string.key_index) -> showData("IndexMicroMsg")
+            resStr(R.string.key_sns) -> showData("SnsMicroMsg")
         }
         return true
     }
 
-    private fun showData(i: Int) {
-        val inData = Intent(this, TableActivity::class.java)
-        inData.putExtra("type", i)
-        startActivity(inData)
+    private fun showData(name: String) {
+        val clz = Class.forName("$packageName.dbui.${name}Activity")
+        val inTable = Intent(this, clz)
+        startActivity(inTable)
     }
-
-
 }
 
 

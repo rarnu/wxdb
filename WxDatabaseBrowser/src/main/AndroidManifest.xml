@@ -26,23 +26,23 @@
                   android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".TableActivity"
-                  android:screenOrientation="portrait">
-
-        </activity>
         <activity android:name=".SQLActivity"
                   android:screenOrientation="portrait"
                   android:windowSoftInputMode="adjustPan">
         </activity>
-        <activity android:name=".SnsActivity"
-                  android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".SnsDetailActivity"
-                  android:screenOrientation="portrait">
-
-        </activity>
         <activity android:name=".AboutActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".dbui.EnMicroMsgActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".dbui.IndexMicroMsgActivity"
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".dbui.SnsMicroMsgActivity"
                   android:screenOrientation="portrait">
 
         </activity>

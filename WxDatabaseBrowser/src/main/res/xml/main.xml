@@ -9,8 +9,16 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/title_table">
+        <Preference android:key="@string/key_app_brand_comm" android:title="@string/title_app_brand_comm"/>
+        <Preference android:key="@string/key_aux_data" android:title="@string/title_aux_data"/>
+        <Preference android:key="@string/key_common_one" android:title="@string/title_common_one"/>
+        <Preference android:key="@string/key_favorite" android:title="@string/title_favorite"/>
         <Preference android:key="@string/key_micro_msg" android:title="@string/title_micro_msg"/>
         <Preference android:key="@string/key_index" android:title="@string/title_index"/>
+        <Preference android:key="@string/key_priority" android:title="@string/title_priority"/>
         <Preference android:key="@string/key_sns" android:title="@string/title_sns"/>
+        <Preference android:key="@string/key_story" android:title="@string/title_story"/>
+        <Preference android:key="@string/key_wxexpt" android:title="@string/title_wxexpt"/>
+        <Preference android:key="@string/key_wxfile_index" android:title="@string/title_wxfile_index"/>
     </PreferenceCategory>
 </PreferenceScreen>
