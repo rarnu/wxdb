@@ -1,7 +1,5 @@
 package com.rarnu.wxdb.browser.sns
 
-import android.util.Log
-
 class ParseInfo {
 
     companion object {
@@ -13,11 +11,9 @@ class ParseInfo {
     var fieldName: String? = ""
     var childList = mutableListOf<ParseInfo>()
 
-
-
     override fun toString(): String {
         val sb = StringBuffer()
-        var commonType = listOf("int", "boolean", "float", "long", "byte[]", "double", "java.lang.String")
+        val commonType = listOf("int", "boolean", "float", "long", "byte[]", "double", "java.lang.String")
         if (!(fieldName.equals("") && fieldType.equals(""))) {
             if (!commonType.contains(fieldType)) {
                 sb.append(spaceStr(count, true)).append(fieldType).append(" ").append(fieldName).append(" => ")

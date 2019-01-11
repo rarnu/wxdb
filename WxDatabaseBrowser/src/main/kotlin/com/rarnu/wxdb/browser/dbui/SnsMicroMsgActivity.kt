@@ -10,4 +10,11 @@ class SnsMicroMsgActivity : BaseTableActivity() {
 
     override fun titleResId() = R.string.title_sns
 
+
+    override fun showBlobData(row: Int, col: Int, blob: ByteArray) {
+        // currentTableName
+        // col
+
+
+    }
 }

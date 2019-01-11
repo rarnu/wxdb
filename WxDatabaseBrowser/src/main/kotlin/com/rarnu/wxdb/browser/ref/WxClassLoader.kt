@@ -25,8 +25,7 @@ object WxClassLoader {
     var clzParserTimeLine:Class<*>? = null
     var clzParserByd:Class<*>? = null
 
-
-
+    val parserMap = mutableMapOf<String, Class<*>?>()
 
     fun initClasses(ctx: Context, complete: () -> Unit) = thread {
         val wxPath = File(Config.basePath(), "wechat.apk")
@@ -70,8 +69,13 @@ object WxClassLoader {
             clzDatabaseErrorHandler = cl7.loadClass("com.tencent.wcdb.DatabaseErrorHandler")
 
             //sns
-            clzParserTimeLine = cl7.loadClass("com.tencent.mm.protocal.protobuf.TimeLineObject")
-            clzParserByd = cl7.loadClass("com.tencent.mm.protocal.protobuf.byd")
+            clzParserTimeLine = cl7.loadClass("com.tencent.mm.protocal.protobuf.TimeLineObject")    // content
+            clzParserByd = cl7.loadClass("com.tencent.mm.protocal.protobuf.byd")    // attr
+
+            parserMap["SnsMicroMsg.SnsInfo.content"] = clzParserTimeLine
+            parserMap["SnsMicroMsg.SnsInfo.attrBuf"] = clzParserByd
+
+
         } catch (e: Throwable) {
             Log.e("DB", "initClasses.error = $e")
         }
