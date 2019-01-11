@@ -2,6 +2,7 @@ package com.rarnu.wxdb.browser.database
 
 import android.database.Cursor
 import android.util.Log
+import java.io.File
 import java.lang.reflect.Method
 
 abstract class DbIntf(pwd: String? = null) {
@@ -30,16 +31,20 @@ abstract class DbIntf(pwd: String? = null) {
     }
 
     fun getDbName(): String {
-        val mth: Method? = db?.javaClass?.getDeclaredMethod("getPath")
+        val mth = db?.javaClass?.getDeclaredMethod("getPath")
         mth?.isAccessible = true
 
-        val path = mth?.invoke(db) as String
-        val regex = """(.+)/(.+)\.(.+)""".toRegex()
-        val matchResult = regex.matchEntire(path)
+        val path = mth?.invoke(db) as? String
 
-        if (matchResult != null) {
-            return matchResult.destructured.component2()
+        if (path != null) {
+            val regex = """(.+)/(.+)\.(.+)""".toRegex()
+            val matchResult = regex.matchEntire(path)
+
+            if (matchResult != null) {
+                return matchResult.destructured.component2()
+            }
         }
+
         return ""
     }
 
