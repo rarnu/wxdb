@@ -6,6 +6,8 @@ import net.sqlcipher.database.SQLiteDatabaseHook
 import java.io.File
 
 class DbEnMicroMsg(pwd: String?) : DbIntf(pwd) {
+
+    @Suppress("HasPlatformType")
     override fun initDb(pwd: String?) = SQLiteDatabase.openOrCreateDatabase(File(Config.basePath(), "msg.db"), pwd, null, object : SQLiteDatabaseHook {
         override fun preKey(database: SQLiteDatabase) {}
         override fun postKey(database: SQLiteDatabase) {

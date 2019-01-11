@@ -67,8 +67,7 @@ object Alg {
 
     fun getUserFolder(): String {
         val uin = getUin()
-        val md5 = Utils.md5Encode("mm$uin")
-        return md5
+        return Utils.md5Encode("mm$uin")
     }
 
 }

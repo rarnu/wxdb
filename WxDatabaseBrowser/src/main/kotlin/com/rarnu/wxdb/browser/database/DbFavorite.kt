@@ -6,6 +6,7 @@ import net.sqlcipher.database.SQLiteDatabaseHook
 import java.io.File
 
 class DbFavorite(pwd: String?) : DbIntf(pwd) {
+
     override fun initDb(pwd: String?) = try {
         SQLiteDatabase.openOrCreateDatabase(File(Config.basePath(), "favorite.db"), pwd, null, object : SQLiteDatabaseHook {
             override fun preKey(database: SQLiteDatabase) {}

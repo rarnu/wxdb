@@ -54,7 +54,7 @@ class WxGridAdapter(ctx: Context, lst: MutableList<List<FieldData>>): BaseAdapte
                 val lp = LinearLayout.LayoutParams(75.dip2px(), LinearLayout.LayoutParams.MATCH_PARENT)
                 lp.rightMargin = 1
                 txt.layoutParams = lp
-                txt.gravity = Gravity.LEFT or Gravity.CENTER_VERTICAL
+                txt.gravity = Gravity.START or Gravity.CENTER_VERTICAL
                 txt.ellipsize = TextUtils.TruncateAt.END
                 txt.setSingleLine(true)
                 txt.maxLines = 1

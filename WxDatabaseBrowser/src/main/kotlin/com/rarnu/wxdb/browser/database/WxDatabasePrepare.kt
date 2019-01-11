@@ -1,5 +1,6 @@
 package com.rarnu.wxdb.browser.database
 
+import android.annotation.SuppressLint
 import com.rarnu.kt.android.runOnMainThread
 import com.rarnu.wxdb.browser.util.Config
 import com.rarnu.wxdb.browser.util.Alg
@@ -9,6 +10,7 @@ import kotlin.concurrent.thread
 
 object WxDatabasePrepare {
 
+    @SuppressLint("SdCardPath")
     private const val wxRootPath = "/data/data/com.tencent.mm/"
     private const val wxUinPath = wxRootPath + "shared_prefs/auth_info_key_prefs.xml"
     private const val wxAccountPath = wxRootPath + "shared_prefs/notify_key_pref_no_account.xml"
@@ -25,7 +27,6 @@ object WxDatabasePrepare {
     private const val wxWxExpt = "WxExpt.db"
     private const val wxWxFileIndex = "WxFileIndex.db"
     private const val wxDeviceInfoCfg = wxDbDir + "CompatibleInfo.cfg"
-
 
     fun refreshData(complete: () -> Unit) = thread {
         Utils.copyFile(wxUinPath, File(Config.basePath(), "uin.xml").absolutePath)

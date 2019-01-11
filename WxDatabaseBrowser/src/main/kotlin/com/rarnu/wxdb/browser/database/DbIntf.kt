@@ -11,10 +11,19 @@ abstract class DbIntf(pwd: String? = null) {
     private var db: Any? = null
     private var mQuery: Method? = null
     private var mClose: Method? = null
+    private var mGetPath: Method? = null
+
+    var dbName = ""
+        get() {
+            val path = mGetPath?.invoke(db) as? String
+            val f = File(path)
+            return if (f.exists()) f.nameWithoutExtension else ""
+        }
 
     abstract fun initDb(pwd: String?): Any?
 
     init {
+        @Suppress("LeakingThis")
         db = initDb(pwd)
         mQuery = try {
             db?.javaClass?.getDeclaredMethod("rawQuery", String::class.java, Array<Any>::class.java)
@@ -28,24 +37,9 @@ abstract class DbIntf(pwd: String? = null) {
             db?.javaClass?.superclass?.getDeclaredMethod("close")
         }
         mClose?.isAccessible = true
-    }
 
-    fun getDbName(): String {
-        val mth = db?.javaClass?.getDeclaredMethod("getPath")
-        mth?.isAccessible = true
-
-        val path = mth?.invoke(db) as? String
-
-        if (path != null) {
-            val regex = """(.+)/(.+)\.(.+)""".toRegex()
-            val matchResult = regex.matchEntire(path)
-
-            if (matchResult != null) {
-                return matchResult.destructured.component2()
-            }
-        }
-
-        return ""
+        mGetPath = db?.javaClass?.getDeclaredMethod("getPath")
+        mGetPath?.isAccessible = true
     }
 
     fun getTableList(): MutableList<String> {
@@ -89,27 +83,19 @@ abstract class DbIntf(pwd: String? = null) {
         callback(rowCount, pageCount)
     }
 
-    fun queryTable(tableName: String): Cursor? {
-        val c = try {
-            mQuery?.invoke(db, "SELECT * FROM $tableName", null) as? Cursor
-        } catch (e: Throwable) {
-            Log.e("DB", "queryTable.error => $e")
-            null
-        }
-        return c
+    fun queryTable(tableName: String) = try {
+        mQuery?.invoke(db, "SELECT * FROM $tableName", null) as? Cursor
+    } catch (e: Throwable) {
+        Log.e("DB", "queryTable.error => $e")
+        null
     }
 
-    fun executeSQL(sql: String): Cursor? {
-        val c = try {
-            mQuery?.invoke(db, sql, null) as? Cursor
-        } catch (e: Throwable) {
-            null
-        }
-        return c
+    fun executeSQL(sql: String) = try {
+        mQuery?.invoke(db, sql, null) as? Cursor
+    } catch (e: Throwable) {
+        null
     }
 
-    fun close() {
-        mClose?.invoke(db)
-    }
+    fun close() = mClose?.invoke(db)
 
 }

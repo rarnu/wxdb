@@ -12,26 +12,20 @@ class ParseInfo {
     var childList = mutableListOf<ParseInfo>()
 
     override fun toString(): String {
-        val sb = StringBuffer()
+        var sb = ""
         val commonType = listOf("int", "boolean", "float", "long", "byte[]", "double", "java.lang.String")
-        if (!(fieldName.equals("") && fieldType.equals(""))) {
-            if (!commonType.contains(fieldType)) {
-                sb.append(spaceStr(count, true)).append(fieldType).append(" ").append(fieldName).append(" => ")
-                    .append(fieldValue).append("\n")
+        if (fieldName != "" || fieldType != "") {
+            sb += if (!commonType.contains(fieldType)) {
+                "${spaceStr(count, true)}$fieldType $fieldName => $fieldValue\n"
             } else {
-                sb.append(spaceStr(count, false)).append(fieldType).append(" ").append(fieldName).append(" => ")
-                    .append(fieldValue).append("\n")
+                "${spaceStr(count, false)}$fieldType $fieldName => $fieldValue\n"
             }
-
             if (childList.isNotEmpty()) {
                 count++
-                for (child in childList) {
-                    sb.append(child.toString())
-                }
+                childList.forEach { sb += "$it" }
             }
         }
-
-        return sb.toString()
+        return sb
     }
 
     private fun spaceStr(index: Int, isAdd: Boolean): String {

@@ -10,9 +10,9 @@ class BlobActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_blob)
-        actionBar.title = intent.getStringExtra("Title")
+        actionBar.title = intent.getStringExtra("title")
         showActionBack()
-        tv_blobInfo.text = intent.getStringExtra("BlobParseInfo")
+        tv_blobInfo.text = intent.getStringExtra("blobParseInfo")
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
