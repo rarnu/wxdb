@@ -22,8 +22,12 @@ object WxClassLoader {
     var clzDatabaseErrorHandler: Class<*>? = null
 
     //snsInfo
-    var clzParserTimeLine:Class<*>? = null
-    var clzParserByd:Class<*>? = null
+    var clzParserTimeLine: Class<*>? = null
+    var clzParserByd: Class<*>? = null
+
+    //comment
+    var clzParserCurAction: Class<*>? = null
+    var clzParserRefAction: Class<*>? = null
 
     val parserMap = mutableMapOf<String, Class<*>?>()
 
@@ -72,8 +76,14 @@ object WxClassLoader {
             clzParserTimeLine = cl7.loadClass("com.tencent.mm.protocal.protobuf.TimeLineObject")    // content
             clzParserByd = cl7.loadClass("com.tencent.mm.protocal.protobuf.byd")    // attr
 
-            parserMap["SnsMicroMsg.SnsInfo.content"] = clzParserTimeLine
-            parserMap["SnsMicroMsg.SnsInfo.attrBuf"] = clzParserByd
+            //comment
+            clzParserCurAction = cl7.loadClass("com.tencent.mm.protocal.protobuf.bxl") //curActionBuf
+            clzParserRefAction = cl7.loadClass("com.tencent.mm.protocal.protobuf.bxl") //refActionBuf
+
+            parserMap["sns.SnsInfo.content"] = clzParserTimeLine
+            parserMap["sns.SnsInfo.attrBuf"] = clzParserByd
+            parserMap["sns.SnsComment.curActionBuf"] = clzParserCurAction
+            parserMap["sns.SnsComment.refActionBuf"] = clzParserRefAction
 
 
         } catch (e: Throwable) {

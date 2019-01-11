@@ -29,6 +29,20 @@ abstract class DbIntf(pwd: String? = null) {
         mClose?.isAccessible = true
     }
 
+    fun getDbName(): String {
+        val mth: Method? = db?.javaClass?.getDeclaredMethod("getPath")
+        mth?.isAccessible = true
+
+        val path = mth?.invoke(db) as String
+        val regex = """(.+)/(.+)\.(.+)""".toRegex()
+        val matchResult = regex.matchEntire(path)
+
+        if (matchResult != null) {
+            return matchResult.destructured.component2()
+        }
+        return ""
+    }
+
     fun getTableList(): MutableList<String> {
         val list = mutableListOf<String>()
         val c = try {

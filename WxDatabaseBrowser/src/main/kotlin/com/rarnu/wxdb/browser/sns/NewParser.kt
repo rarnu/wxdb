@@ -18,7 +18,6 @@ class NewParser(private val bArr: ByteArray, private val clz: Class<*>?) {
 
     private fun parser(obj: Any?, clz: Class<*>?, root: ParseInfo) {
         if (obj != null) {
-//            contentSb.append(spaceStr(count, true)).append(clz?.name).append("\n")
             root.fieldType = clz?.name
             root.fieldValue = obj.toString()
             root.fieldName = ""
