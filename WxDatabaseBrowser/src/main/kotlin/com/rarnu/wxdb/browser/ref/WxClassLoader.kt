@@ -21,6 +21,13 @@ object WxClassLoader {
     var clzCursorFactory: Class<*>? = null
     var clzDatabaseErrorHandler: Class<*>? = null
 
+    //snsInfo
+    var clzParserTimeLine:Class<*>? = null
+    var clzParserByd:Class<*>? = null
+
+
+
+
     fun initClasses(ctx: Context, complete: () -> Unit) = thread {
         val wxPath = File(Config.basePath(), "wechat.apk")
         if (!wxPath.exists()) {
@@ -61,6 +68,10 @@ object WxClassLoader {
             clzSQLiteDatabase = cl7.loadClass("com.tencent.wcdb.database.SQLiteDatabase")
             clzCursorFactory = cl7.loadClass("com.tencent.wcdb.database.SQLiteDatabase\$CursorFactory")
             clzDatabaseErrorHandler = cl7.loadClass("com.tencent.wcdb.DatabaseErrorHandler")
+
+            //sns
+            clzParserTimeLine = cl7.loadClass("com.tencent.mm.protocal.protobuf.TimeLineObject")
+            clzParserByd = cl7.loadClass("com.tencent.mm.protocal.protobuf.byd")
         } catch (e: Throwable) {
             Log.e("DB", "initClasses.error = $e")
         }
