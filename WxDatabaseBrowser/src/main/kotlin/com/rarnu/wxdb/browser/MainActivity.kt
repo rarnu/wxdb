@@ -141,9 +141,18 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
         prefRefreshData.isEnabled = e
         prefBaseInfo.isEnabled = e
         prefAlgorithm.isEnabled = e
+
         prefMicroMsg.isEnabled = e
         prefIndex.isEnabled = e
         prefSns.isEnabled = e
+        prefAuxData.isEnabled = e
+        prefCommonOne.isEnabled = e
+        prefStory.isEnabled = e
+        prefAppBrandComm.isEnabled = e
+        prefFavorite.isEnabled = e
+        prefPriority.isEnabled = e
+        prefWxExpt.isEnabled = e
+        prefWxFileIndex.isEnabled = e
     }
 
     override fun onPreferenceClick(preference: Preference): Boolean {

@@ -11,7 +11,11 @@ class DbIndexMicroMsg(pwd: String?) : DbIntf(pwd) {
     override fun initDb(pwd: String?): Any? {
         val mLoad = clzSQLiteDatabase?.getDeclaredMethod("openOrCreateDatabase", String::class.java, ByteArray::class.java, clzCursorFactory, clzDatabaseErrorHandler)
         mLoad?.isAccessible = true
-        return mLoad?.invoke(null, File(Config.basePath(), "index.db").absolutePath, pwd!!.toByteArray(), null, null)
+        return try {
+            mLoad?.invoke(null, File(Config.basePath(), "index.db").absolutePath, pwd!!.toByteArray(), null, null)
+        } catch (e: Throwable) {
+            null
+        }
     }
 
 }

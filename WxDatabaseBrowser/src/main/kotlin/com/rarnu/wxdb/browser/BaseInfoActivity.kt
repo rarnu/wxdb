@@ -5,8 +5,10 @@ import android.preference.Preference
 import android.view.MenuItem
 import com.rarnu.kt.android.PreferenceActivity
 import com.rarnu.kt.android.resStr
+import com.rarnu.kt.android.runOnMainThread
 import com.rarnu.kt.android.showActionBack
 import com.rarnu.wxdb.browser.util.Alg
+import kotlin.concurrent.thread
 
 class BaseInfoActivity: PreferenceActivity() {
 
@@ -34,13 +36,26 @@ class BaseInfoActivity: PreferenceActivity() {
         prefIndexPwd = pref(R.string.key_index_pwd)
         prefPriorityPwd = pref(R.string.key_priority_pwd)
         prefUserFolder = pref(R.string.key_user_folder)
-        prefUin.summary = Alg.getUin()
-        prefDid.summary = Alg.loadDeviceId()
-        prefWxid.summary = Alg.getLoginAccount()
-        prefEnPwd.summary = Alg.getEnMicroMsgPassword()
-        prefIndexPwd.summary = Alg.getIndexMicroMsgPassword()
-        prefPriorityPwd.summary = Alg.getPriorityPassword()
-        prefUserFolder.summary = Alg.getUserFolder()
+
+        thread {
+            val uin = Alg.getUin()
+            val did = Alg.loadDeviceId()
+            val acc = Alg.getLoginAccount()
+            val pwd = Alg.getEnMicroMsgPassword()
+            val idxpwd = Alg.getIndexMicroMsgPassword()
+            val ppwd = Alg.getPriorityPassword()
+            val fld = Alg.getUserFolder()
+
+            runOnMainThread {
+                prefUin.summary = uin
+                prefDid.summary = did
+                prefWxid.summary = acc
+                prefEnPwd.summary = pwd
+                prefIndexPwd.summary = idxpwd
+                prefPriorityPwd.summary = ppwd
+                prefUserFolder.summary = fld
+            }
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
