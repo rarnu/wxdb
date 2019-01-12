@@ -21,4 +21,5 @@
         <Preference android:key="@string/key_wxexpt" android:title="@string/title_wxexpt"/>
         <Preference android:key="@string/key_wxfile_index" android:title="@string/title_wxfile_index"/>
     </PreferenceCategory>
+
 </PreferenceScreen>

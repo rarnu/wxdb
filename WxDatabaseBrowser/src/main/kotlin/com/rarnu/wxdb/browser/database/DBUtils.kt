@@ -41,8 +41,7 @@ object DBUtils {
         }
     }
 
-    fun findSnsImageFile(mediaId: String, callback: (f: File?) -> Unit) = thread {
-        var img: File?
+    fun findSnsImageFile(mediaId: String?, callback: (f: File?) -> Unit) = thread {
         runCommand {
             runAsRoot = true
             commands.add("find /sdcard/tencent/MicroMsg -name \"*$mediaId\"")
@@ -61,7 +60,7 @@ object DBUtils {
                     }
                 }
                 val f = File(p)
-                img = if (f.exists()) f else null
+                val img = if (f.exists()) f else null
                 runOnMainThread { callback(img) }
             }
         }

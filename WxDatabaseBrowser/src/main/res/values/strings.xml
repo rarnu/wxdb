@@ -27,6 +27,9 @@
     <string name="title_app_brand_comm_pwd">Password for AppBrandComm</string>
     <string name="title_user_folder">User Folder</string>
     <string name="title_sns_detail">SNS Detail</string>
+    <string name="title_sample">Sample</string>
+    <string name="title_sns_image">Sns Image</string>
+    <string name="title_image_id" formatted="false">Image Id: %s</string>
 
     <string name="key_refresh_data">key_refresh_data</string>
     <string name="key_base_info">key_base_info</string>
@@ -50,6 +53,7 @@
     <string name="key_priority_pwd">key_priority_pwd</string>
     <string name="key_app_brand_comm_pwd">key_app_brand_comm_pwd</string>
     <string name="key_user_folder">key_user_folder</string>
+    <string name="key_sample">key_sample</string>
 
     <string name="summary_in_processing">In Processing...</string>
 

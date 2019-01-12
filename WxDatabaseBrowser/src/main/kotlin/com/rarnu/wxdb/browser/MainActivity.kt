@@ -37,6 +37,7 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
     private lateinit var prefWxExpt: Preference
     private lateinit var prefWxFileIndex: Preference
 
+
     private val menuInfo = Menu.FIRST + 9
 
     private val keyFirstStart = "key_first_start"
@@ -164,7 +165,7 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
             resStr(R.string.key_common_one) -> showData("CommonOne")                        // done
             resStr(R.string.key_story) -> showData("Story")                                 // done
             resStr(R.string.key_app_brand_comm) -> showData("AppBrandComm")                 // done
-            resStr(R.string.key_favorite) -> showData("Favorite")
+            resStr(R.string.key_favorite) -> showData("Favorite")                           // done
             resStr(R.string.key_priority) -> showData("Priority")                           // done
             resStr(R.string.key_wxexpt) -> showData("WxExpt")                               // done
             resStr(R.string.key_wxfile_index) -> showData("WxFileIndex")                    // done
