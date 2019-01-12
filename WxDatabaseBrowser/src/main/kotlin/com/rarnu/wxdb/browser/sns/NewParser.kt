@@ -18,9 +18,11 @@ class NewParser(private val bArr: ByteArray, private val clz: Class<*>?) {
 
     private fun parser(obj: Any?, clz: Class<*>?, root: ParseInfo) {
         if (obj != null) {
-            root.fieldType = clz?.name
-            root.fieldValue = obj.toString()
-            root.fieldName = ""
+            if (root.fieldType == null || root.fieldType == "") {
+                root.fieldType = clz?.name
+                root.fieldValue = obj.toString()
+                root.fieldName = ""
+            }
             val fields = clz?.declaredFields ?: return
             for (field in fields) {
                 field.isAccessible = true
