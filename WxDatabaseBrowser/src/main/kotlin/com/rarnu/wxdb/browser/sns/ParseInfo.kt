@@ -1,6 +1,5 @@
 package com.rarnu.wxdb.browser.sns
 
-import android.util.Log
 import com.unnamed.b.atv.model.TreeNode
 import java.io.Serializable
 
@@ -15,7 +14,6 @@ class ParseInfo: Serializable {
         if (fieldType == null || fieldType == "") {
             return null
         }
-        Log.e("DB", "item => $fieldName: $fieldType = $fieldValue")
         val thisObj = TreeNode(this)
         if (childList.isNotEmpty()) {
             childList.forEach {

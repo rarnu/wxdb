@@ -15,11 +15,15 @@ class SnsMicroMsgActivity : BaseTableActivity() {
     override fun titleResId() = R.string.title_sns
 
     override fun showBlobData(row: Int, col: Int, blob: ByteArray) {
-        val clz = WxClassLoader.parserMap["${db.dbName}.$currentTableName.${currentTableField[col].str}"]
-        val info = NewParser(blob, clz).parseFrom()
-        val intent = Intent(this, BlobActivity::class.java)
-        intent.putExtra("blobParseInfo", info)
-        intent.putExtra("title", "${db.dbName}.$currentTableName.${currentTableField[col].str}")
-        startActivity(intent)
+        if (currentTableName in arrayOf("SnsInfo", "SnsComment")) {
+            val clz = WxClassLoader.parserMap["${db.dbName}.$currentTableName.${currentTableField[col].str}"]
+            val info = NewParser(blob, clz).parseFrom()
+            val intent = Intent(this, BlobActivity::class.java)
+            intent.putExtra("blobParseInfo", info)
+            intent.putExtra("title", "${db.dbName}.$currentTableName.${currentTableField[col].str}")
+            startActivity(intent)
+        } else {
+            super.showBlobData(row, col, blob)
+        }
     }
 }
