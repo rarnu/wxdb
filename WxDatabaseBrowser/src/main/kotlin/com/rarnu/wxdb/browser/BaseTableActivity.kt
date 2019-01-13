@@ -14,6 +14,8 @@ import com.rarnu.wxdb.browser.database.DbIntf
 import com.rarnu.wxdb.browser.database.FieldData
 import com.rarnu.wxdb.browser.grid.WxGridAdapter
 import com.rarnu.wxdb.browser.grid.WxGridView
+import com.rarnu.wxdb.browser.ref.WxClassLoader
+import com.rarnu.wxdb.browser.sns.NewParser
 import kotlinx.android.synthetic.main.activity_table.*
 import kotlinx.android.synthetic.main.item_table.view.*
 import java.nio.charset.Charset
@@ -261,16 +263,25 @@ abstract class BaseTableActivity : Activity(), AdapterView.OnItemSelectedListene
         alert("$currentTableName [$row, $col]", str, resStr(R.string.btn_ok)) { }
     }
 
-    open fun showBlobData(row: Int, col: Int, blob: ByteArray) {
-        val str = blob.toString(Charset.defaultCharset())
-        alert("$currentTableName [$row, $col]", str, resStr(R.string.btn_ok)) { }
+    open fun showBlobData(row: Int, col: Int, blob: ByteArray, clz: Class<*>) {
+        val info = NewParser(blob, clz).parseFrom()
+        val intent = Intent(this, BlobActivity::class.java)
+        intent.putExtra("blobParseInfo", info)
+        intent.putExtra("title", "${db.dbName}.$currentTableName.${currentTableField[col].str}")
+        startActivity(intent)
     }
 
     override fun onWxGridClick(row: Int, col: Int, data: FieldData) {
         if (!data.isBlob && data.str.trim() != "") {
             showStringData(row, col, data.str)
         } else if (data.isBlob && data.blob != null) {
-            showBlobData(row, col, data.blob!!)
+            val clz = WxClassLoader.parserMap["${db.dbName}.$currentTableName.${currentTableField[col].str}"]
+            if (clz != null) {
+                showBlobData(row, col, data.blob!!, clz)
+            } else {
+                val str = data.blob!!.toString(Charset.defaultCharset())
+                alert("$currentTableName [$row, $col]", str, resStr(R.string.btn_ok)) { }
+            }
         }
     }
 
