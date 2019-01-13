@@ -271,6 +271,13 @@ abstract class BaseTableActivity : Activity(), AdapterView.OnItemSelectedListene
         startActivity(intent)
     }
 
+    open fun showBlobHexData(row: Int, col: Int, blob: ByteArray) {
+        val intent = Intent(this, BlobHexActivity::class.java)
+        intent.putExtra("data", blob)
+        intent.putExtra("title", "${db.dbName}.$currentTableName.${currentTableField[col].str}")
+        startActivity(intent)
+    }
+
     override fun onWxGridClick(row: Int, col: Int, data: FieldData) {
         if (!data.isBlob && data.str.trim() != "") {
             showStringData(row, col, data.str)
@@ -279,8 +286,7 @@ abstract class BaseTableActivity : Activity(), AdapterView.OnItemSelectedListene
             if (clz != null) {
                 showBlobData(row, col, data.blob!!, clz)
             } else {
-                val str = data.blob!!.toString(Charset.defaultCharset())
-                alert("$currentTableName [$row, $col]", str, resStr(R.string.btn_ok)) { }
+                showBlobHexData(row, col, data.blob!!)
             }
         }
     }

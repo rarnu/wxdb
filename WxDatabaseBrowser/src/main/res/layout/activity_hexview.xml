@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0px"
+                  android:layout_weight="1" android:orientation="vertical">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:padding="4dip"
+                  android:text="@string/text_blob_string"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:scrollbars="none">
+            <TextView
+                    android:id="@+id/tvBlobString"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dip"/>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0px"
+                  android:layout_weight="1" android:orientation="vertical">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:padding="4dip"
+                  android:text="@string/text_blob_hex"/>
+        <GridView
+                android:id="@+id/gvBlobHex"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="16"
+                android:horizontalSpacing="1px"
+                android:verticalSpacing="1px"
+                android:paddingTop="1px"
+                android:paddingLeft="1px"
+                android:scrollbars="none"
+        />
+
+    </LinearLayout>
+
+
+</LinearLayout>

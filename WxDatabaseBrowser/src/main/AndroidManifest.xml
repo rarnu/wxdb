@@ -81,6 +81,9 @@
         <activity android:name=".BlobActivity"
                   android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".BlobHexActivity"
+                  android:screenOrientation="portrait">
+        </activity>
 
     </application>
 </manifest>

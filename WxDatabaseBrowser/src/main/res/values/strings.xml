@@ -69,6 +69,8 @@
 
     <string name="text_comment">Comment</string>
     <string name="text_like">Like</string>
+    <string name="text_blob_string">Blob String:</string>
+    <string name="text_blob_hex">Blob Hex:</string>
 
     <string name="menu_info">Information</string>
     <string name="menu_sql">SQL</string>
