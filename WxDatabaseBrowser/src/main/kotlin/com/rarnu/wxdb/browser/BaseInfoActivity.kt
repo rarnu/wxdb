@@ -36,6 +36,7 @@ class BaseInfoActivity: PreferenceActivity() {
         prefIndexPwd = pref(R.string.key_index_pwd)
         prefPriorityPwd = pref(R.string.key_priority_pwd)
         prefUserFolder = pref(R.string.key_user_folder)
+        switchEnabled(false)
 
         thread {
             val uin = Alg.getUin()
@@ -54,8 +55,19 @@ class BaseInfoActivity: PreferenceActivity() {
                 prefIndexPwd.summary = idxpwd
                 prefPriorityPwd.summary = ppwd
                 prefUserFolder.summary = fld
+                switchEnabled(true)
             }
         }
+    }
+
+    private fun switchEnabled(e: Boolean) {
+        prefUin.isEnabled = e
+        prefDid.isEnabled = e
+        prefWxid.isEnabled = e
+        prefEnPwd.isEnabled = e
+        prefIndexPwd.isEnabled = e
+        prefPriorityPwd.isEnabled = e
+        prefUserFolder.isEnabled = e
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

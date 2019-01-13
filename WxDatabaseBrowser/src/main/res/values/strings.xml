@@ -56,6 +56,7 @@
     <string name="key_sample">key_sample</string>
 
     <string name="summary_in_processing">In Processing...</string>
+    <string name="summary_loading">Loading...</string>
 
     <string name="toast_no_root">Device must be rooted before use the application.</string>
 
