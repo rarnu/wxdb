@@ -247,13 +247,14 @@ abstract class BaseTableActivity : Activity(), AdapterView.OnItemSelectedListene
             head.add(FieldData(c.getColumnName(i)))
         }
         result.add(head)
-        c.moveToFirst()
-        while (c.moveToNext()) {
-            val line = mutableListOf<FieldData>()
-            for (i in 0 until cnt) {
-                line.add(if (c.getType(i) == Cursor.FIELD_TYPE_BLOB) FieldData(c.getBlob(i)) else FieldData(c.getString(i) ?: ""))
-            }
-            result.add(line)
+        if (c.moveToFirst()) {
+            do {
+                val line = mutableListOf<FieldData>()
+                for (i in 0 until cnt) {
+                    line.add(if (c.getType(i) == Cursor.FIELD_TYPE_BLOB) FieldData(c.getBlob(i)) else FieldData(c.getString(i) ?: ""))
+                }
+                result.add(line)
+            } while (c.moveToNext())
         }
         return result
     }
