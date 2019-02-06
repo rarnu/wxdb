@@ -1,19 +1,18 @@
 package com.rarnu.wxdb.browser
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import com.rarnu.kt.android.BackActivity
 import com.rarnu.kt.android.BaseAdapter
 import com.rarnu.kt.android.resStr
-import com.rarnu.kt.android.showActionBack
 import kotlinx.android.synthetic.main.activity_sql.*
 import kotlinx.android.synthetic.main.item_field_name.view.*
 
-class SQLActivity: Activity() {
+class SQLActivity: BackActivity() {
 
     private var tableName = ""
     private val tableFields = mutableListOf<String>()
@@ -25,7 +24,6 @@ class SQLActivity: Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sql)
         actionBar.title = resStr(R.string.menu_sql)
-        showActionBack()
         tableName = intent.getStringExtra("table")
         tableFields.addAll(intent.getStringArrayExtra("field"))
         tvSelect.text = "SELECT * FROM $tableName WHERE"
@@ -55,7 +53,6 @@ class SQLActivity: Activity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menu.clear()
         val mRun = menu.add(0, menuRun, 0, R.string.menu_exec_sql)
         mRun.setIcon(android.R.drawable.ic_menu_send)
         mRun.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
@@ -64,7 +61,6 @@ class SQLActivity: Activity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
-            android.R.id.home -> finish()
             menuRun -> {
                 val inRet = Intent()
                 inRet.putExtra("sql", buildSQL())
@@ -72,7 +68,7 @@ class SQLActivity: Activity() {
                 finish()
             }
         }
-        return true
+        return super.onOptionsItemSelected(item)
     }
 
     private fun buildSQL(): String {
@@ -99,7 +95,7 @@ class SQLActivity: Activity() {
         override fun newHolder(baseView: View) = FieldNameHolder(baseView)
 
         inner class FieldNameHolder(v: View) {
-            val tvFieldName = v.tvFieldName
+            internal val tvFieldName = v.tvFieldName
         }
     }
 

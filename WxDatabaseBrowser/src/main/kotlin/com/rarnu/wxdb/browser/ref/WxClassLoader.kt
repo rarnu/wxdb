@@ -54,10 +54,6 @@ object WxClassLoader {
             parserMap["story.MMStoryInfo.postBuf"] = cl7.loadClass("com.tencent.mm.protocal.protobuf.cbj")
             parserMap["story.StoryEditorInfo.baseItemData"] = cl7.loadClass("com.tencent.mm.bv.a")
 
-            // parserMap["story.StoryRoomInfo.extbuf"] = cl7.loadClass("")
-
-            // parserMap[""] = cl7.loadClass("")
-
         } catch (e: Throwable) {
             Log.e("DB", "initClasses.error = $e")
         }

@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.apache.commons:commons-compress:1.16.1@jar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Develop/gradle-4.4/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.16.1/7b5cdabadb4cf12f5ee0f801399e70635583193f/commons-compress-1.16.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.16.1/7b5cdabadb4cf12f5ee0f801399e70635583193f/commons-compress-1.16.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/Develop/gradle-4.4/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.16.1/f7dde5c5163ac128750fc2d6ec00ae6a7ff624ab/commons-compress-1.16.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.16.1/f7dde5c5163ac128750fc2d6ec00ae6a7ff624ab/commons-compress-1.16.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

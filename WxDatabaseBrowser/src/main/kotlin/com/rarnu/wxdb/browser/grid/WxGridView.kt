@@ -13,6 +13,7 @@ class WxGridView(context: Context) : HorizontalScrollView(context) {
     private val adapter: WxGridAdapter
     var listener: WxGridAdapter.WxGridListener? = null
         set(value) {
+            field = value
             adapter.listener = value
         }
 

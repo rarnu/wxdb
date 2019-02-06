@@ -27,7 +27,7 @@ class HexAdapter(ctx: Context, list: MutableList<Byte>) : BaseAdapter<Byte, HexA
     override fun newHolder(baseView: View) = HexHolder(baseView)
 
     inner class HexHolder(v: View) {
-        val tvHex = v.tvHex
+        internal val tvHex = v.tvHex
     }
 
 }

@@ -4,46 +4,31 @@ import android.content.Context
 import android.graphics.Color
 import android.text.TextUtils
 import android.view.Gravity
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.BaseAdapter
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.rarnu.kt.android.BaseAdapter
 import com.rarnu.kt.android.dip2px
 import com.rarnu.wxdb.browser.R
 import com.rarnu.wxdb.browser.database.FieldData
 
-class WxGridAdapter(ctx: Context, lst: MutableList<List<FieldData>>): BaseAdapter() {
+class WxGridAdapter(ctx: Context, list: MutableList<List<FieldData>>) : BaseAdapter<List<FieldData>, WxGridAdapter.WxGridHolder>(ctx, list) {
 
     interface WxGridListener {
         fun onWxGridClick(row: Int, col: Int, data: FieldData)
     }
 
-    private val context = ctx
-    private val list = lst
     var listener: WxGridListener? = null
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var v = convertView
-        if (v == null) {
-            v = LayoutInflater.from(context).inflate(R.layout.item_cells, parent, false)
-        }
-        var holder = v?.tag as? WxGridHolder
-        if (holder == null) {
-            holder = WxGridHolder(v!!)
-            v.tag = holder
-        }
-        val item = list[position]
+    override fun fillHolder(baseVew: View, holder: WxGridHolder, item: List<FieldData>, position: Int) {
         holder.setCell(item, position)
-        return v!!
     }
 
-    override fun getItem(position: Int) = list[position]
+    override fun getAdapterLayout() = R.layout.item_cells
 
-    override fun getItemId(position: Int) = position.toLong()
+    override fun getValueText(item: List<FieldData>) = ""
 
-    override fun getCount() = list.size
+    override fun newHolder(baseView: View) = WxGridHolder(baseView)
 
     inner class WxGridHolder(v: View) {
         private val baseLayout = v as LinearLayout
@@ -72,5 +57,4 @@ class WxGridAdapter(ctx: Context, lst: MutableList<List<FieldData>>): BaseAdapte
             }
         }
     }
-
 }

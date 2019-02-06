@@ -2,15 +2,13 @@ package com.rarnu.wxdb.browser
 
 import android.os.Bundle
 import android.preference.Preference
-import android.view.MenuItem
-import com.rarnu.kt.android.PreferenceActivity
+import com.rarnu.kt.android.BackPreferenceActivity
 import com.rarnu.kt.android.resStr
 import com.rarnu.kt.android.runOnMainThread
-import com.rarnu.kt.android.showActionBack
 import com.rarnu.wxdb.browser.util.Alg
 import kotlin.concurrent.thread
 
-class BaseInfoActivity: PreferenceActivity() {
+class BaseInfoActivity: BackPreferenceActivity() {
 
     private lateinit var prefUin: Preference
     private lateinit var prefDid: Preference
@@ -23,7 +21,6 @@ class BaseInfoActivity: PreferenceActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         actionBar.title = resStr(R.string.title_base_info)
-        showActionBack()
     }
 
     override fun getPreferenceXml() = R.xml.baseinfo
@@ -69,14 +66,5 @@ class BaseInfoActivity: PreferenceActivity() {
         prefPriorityPwd.isEnabled = e
         prefUserFolder.isEnabled = e
     }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            android.R.id.home -> finish()
-        }
-        return true
-    }
-
-
 
 }

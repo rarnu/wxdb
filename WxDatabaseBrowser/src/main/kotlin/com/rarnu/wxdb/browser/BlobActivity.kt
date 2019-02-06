@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.ViewGroup
 import android.widget.ImageView
+import com.rarnu.kt.android.BackActivity
 import com.rarnu.kt.android.resStr
 import com.rarnu.kt.android.showActionBack
 import com.rarnu.wxdb.browser.database.DBUtils
@@ -16,7 +17,7 @@ import com.unnamed.b.atv.model.TreeNode
 import com.unnamed.b.atv.view.AndroidTreeView
 import kotlinx.android.synthetic.main.activity_blob.*
 
-class BlobActivity : Activity(), TreeNode.TreeNodeClickListener {
+class BlobActivity : BackActivity(), TreeNode.TreeNodeClickListener {
 
     private val root = TreeNode.root()
 
@@ -24,9 +25,7 @@ class BlobActivity : Activity(), TreeNode.TreeNodeClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_blob)
         actionBar.title = intent.getStringExtra("title")
-        showActionBack()
         val info = intent.getSerializableExtra("blobParseInfo") as ParseInfo
-
         root.addChild(info.toTree())
         val treeView = AndroidTreeView(this, root)
         treeView.setDefaultAnimation(true)
@@ -36,13 +35,6 @@ class BlobActivity : Activity(), TreeNode.TreeNodeClickListener {
         layBlob.addView(treeView.view)
         treeView.expandLevel(1)
         treeView.setDefaultNodeClickListener(this)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> finish()
-        }
-        return true
     }
 
     override fun onClick(node: TreeNode?, value: Any?) {

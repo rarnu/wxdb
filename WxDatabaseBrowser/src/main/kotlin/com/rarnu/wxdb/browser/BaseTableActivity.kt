@@ -1,6 +1,5 @@
 package com.rarnu.wxdb.browser
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.database.Cursor
@@ -18,10 +17,9 @@ import com.rarnu.wxdb.browser.ref.WxClassLoader
 import com.rarnu.wxdb.browser.sns.NewParser
 import kotlinx.android.synthetic.main.activity_table.*
 import kotlinx.android.synthetic.main.item_table.view.*
-import java.nio.charset.Charset
 import kotlin.concurrent.thread
 
-abstract class BaseTableActivity : Activity(), AdapterView.OnItemSelectedListener, WxGridAdapter.WxGridListener {
+abstract class BaseTableActivity : BackActivity(), AdapterView.OnItemSelectedListener, WxGridAdapter.WxGridListener {
 
     protected lateinit var db: DbIntf
     private lateinit var grid: WxGridView
@@ -41,10 +39,7 @@ abstract class BaseTableActivity : Activity(), AdapterView.OnItemSelectedListene
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_table)
         actionBar.title = resStr(titleResId())
-        showActionBack()
-
         db = initDb()
-
         grid = WxGridView(this)
         grid.listener = this
         layTable.addView(grid)
@@ -99,7 +94,6 @@ abstract class BaseTableActivity : Activity(), AdapterView.OnItemSelectedListene
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            android.R.id.home -> finish()
             menuSQL -> {
                 if (currentTableName != "") {
                     val inSQL = Intent(this, SQLActivity::class.java)
@@ -135,7 +129,7 @@ abstract class BaseTableActivity : Activity(), AdapterView.OnItemSelectedListene
         override fun newHolder(baseView: View) = TableNameHolder(baseView)
 
         inner class TableNameHolder(v: View) {
-            val tvTableName = v.tvTableName!!
+            internal val tvTableName = v.tvTableName
         }
 
     }

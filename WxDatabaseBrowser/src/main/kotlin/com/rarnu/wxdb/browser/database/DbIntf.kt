@@ -13,7 +13,7 @@ abstract class DbIntf(pwd: String? = null) {
     private var mClose: Method? = null
     private var mGetPath: Method? = null
 
-    var dbName = ""
+    val dbName: String
         get() {
             val path = mGetPath?.invoke(db) as? String
             val f = File(path)
