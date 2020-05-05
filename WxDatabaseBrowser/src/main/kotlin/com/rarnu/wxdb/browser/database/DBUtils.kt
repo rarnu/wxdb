@@ -1,10 +1,10 @@
 package com.rarnu.wxdb.browser.database
 
 import android.graphics.Bitmap
-import com.rarnu.kt.android.UI
-import com.rarnu.kt.android.dip2px
-import com.rarnu.kt.android.runCommand
-import com.rarnu.kt.android.runOnMainThread
+import com.rarnu.android.UI
+import com.rarnu.android.dip2px
+import com.rarnu.android.runOnMainThread
+import com.rarnu.wxdb.browser.util.runCommand
 import java.io.File
 import kotlin.concurrent.thread
 

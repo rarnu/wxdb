@@ -1,5 +1,6 @@
 package com.rarnu.wxdb.browser
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.database.Cursor
@@ -8,7 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
-import com.rarnu.kt.android.*
+import com.rarnu.android.*
 import com.rarnu.wxdb.browser.database.DbIntf
 import com.rarnu.wxdb.browser.database.FieldData
 import com.rarnu.wxdb.browser.grid.WxGridAdapter
@@ -24,11 +25,11 @@ abstract class BaseTableActivity : BackActivity(), AdapterView.OnItemSelectedLis
     protected lateinit var db: DbIntf
     private lateinit var grid: WxGridView
     private lateinit var adapterTableName: TableNameAdapter
-    protected val listTableName = mutableListOf<FieldData>()
-    protected var currentPage = 1
-    protected var pageCount = 0
+    private val listTableName = mutableListOf<FieldData>()
+    private var currentPage = 1
+    private var pageCount = 0
     protected var currentTableName = ""
-    protected val currentTableField = mutableListOf<FieldData>()
+    private val currentTableField = mutableListOf<FieldData>()
     private val size = 50
     private val menuSQL = Menu.FIRST + 1
 
@@ -38,12 +39,12 @@ abstract class BaseTableActivity : BackActivity(), AdapterView.OnItemSelectedLis
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_table)
-        actionBar.title = resStr(titleResId())
+        actionBar?.title = resStr(titleResId())
         db = initDb()
-        grid = WxGridView(this)
-        grid.listener = this
+        grid = WxGridView(this).apply {
+            listener = this@BaseTableActivity
+        }
         layTable.addView(grid)
-
         adapterTableName = TableNameAdapter(this, listTableName)
         spTable.adapter = adapterTableName
         spTable.onItemSelectedListener = this
@@ -86,9 +87,10 @@ abstract class BaseTableActivity : BackActivity(), AdapterView.OnItemSelectedLis
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val mSQL = menu.add(0, menuSQL, 1, R.string.menu_sql)
-        mSQL.setIcon(android.R.drawable.ic_menu_search)
-        mSQL.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+        menu.add(0, menuSQL, 1, R.string.menu_sql).apply {
+            setIcon(android.R.drawable.ic_menu_search)
+            setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+        }
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -96,12 +98,10 @@ abstract class BaseTableActivity : BackActivity(), AdapterView.OnItemSelectedLis
         when (item.itemId) {
             menuSQL -> {
                 if (currentTableName != "") {
-                    val inSQL = Intent(this, SQLActivity::class.java)
-                    inSQL.putExtra("table", currentTableName)
-                    val flist = mutableListOf<String>()
-                    currentTableField.forEach { flist.add(it.str) }
-                    inSQL.putExtra("field", flist.toTypedArray())
-                    startActivityForResult(inSQL, 0)
+                    startActivityForResult(Intent(this, SQLActivity::class.java).apply {
+                        putExtra("table", currentTableName)
+                        putExtra("field", currentTableField.map { it.str }.toTypedArray())
+                    }, 0)
                 }
             }
         }
@@ -135,9 +135,8 @@ abstract class BaseTableActivity : BackActivity(), AdapterView.OnItemSelectedLis
     }
 
     private fun loadTableName() {
-        val tmp = db.getTableList()
         listTableName.clear()
-        tmp.forEach { listTableName.add(FieldData(it)) }
+        db.getTableList().forEach { listTableName.add(FieldData(it)) }
         adapterTableName.notifyDataSetChanged()
 
         // load first table
@@ -159,6 +158,7 @@ abstract class BaseTableActivity : BackActivity(), AdapterView.OnItemSelectedLis
         queryTable()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun queryTable() {
         switchButton(false)
         thread {
@@ -201,8 +201,7 @@ abstract class BaseTableActivity : BackActivity(), AdapterView.OnItemSelectedLis
 
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        val tableName = listTableName[position]
-        loadTableData(tableName.str)
+        loadTableData(listTableName[position].str)
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -259,18 +258,17 @@ abstract class BaseTableActivity : BackActivity(), AdapterView.OnItemSelectedLis
     }
 
     open fun showBlobData(row: Int, col: Int, blob: ByteArray, clz: Class<*>) {
-        val info = NewParser(blob, clz).parseFrom()
-        val intent = Intent(this, BlobActivity::class.java)
-        intent.putExtra("blobParseInfo", info)
-        intent.putExtra("title", "${db.dbName}.$currentTableName.${currentTableField[col].str}")
-        startActivity(intent)
+        startActivity(Intent(this, BlobActivity::class.java).apply {
+            putExtra("blobParseInfo", NewParser(blob, clz).parseFrom())
+            putExtra("title", "${db.dbName}.$currentTableName.${currentTableField[col].str}")
+        })
     }
 
     open fun showBlobHexData(row: Int, col: Int, blob: ByteArray) {
-        val intent = Intent(this, BlobHexActivity::class.java)
-        intent.putExtra("data", blob)
-        intent.putExtra("title", "${db.dbName}.$currentTableName.${currentTableField[col].str}")
-        startActivity(intent)
+        startActivity(Intent(this, BlobHexActivity::class.java).apply {
+            putExtra("data", blob)
+            putExtra("title", "${db.dbName}.$currentTableName.${currentTableField[col].str}")
+        })
     }
 
     override fun onWxGridClick(row: Int, col: Int, data: FieldData) {

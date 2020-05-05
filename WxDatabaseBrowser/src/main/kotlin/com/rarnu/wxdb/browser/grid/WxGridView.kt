@@ -20,17 +20,17 @@ class WxGridView(context: Context) : HorizontalScrollView(context) {
     init {
         isHorizontalScrollBarEnabled = false
         isVerticalScrollBarEnabled = false
-        val lay = LinearLayout(context)
-        lay.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        lay.orientation = LinearLayout.HORIZONTAL
+        val lay = LinearLayout(context).apply {
+            layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT)
+            orientation = LinearLayout.HORIZONTAL
+        }
         addView(lay)
-
-        val lv = ListView(context)
-        lv.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT)
-        lv.isHorizontalScrollBarEnabled = false
-        lv.isVerticalScrollBarEnabled = false
+        val lv = ListView(context).apply {
+            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT)
+            isHorizontalScrollBarEnabled = false
+            isVerticalScrollBarEnabled = false
+        }
         lay.addView(lv)
-
         adapter = WxGridAdapter(context, list)
         lv.adapter = adapter
     }

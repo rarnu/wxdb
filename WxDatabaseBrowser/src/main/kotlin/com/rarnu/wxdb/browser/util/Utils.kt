@@ -1,24 +1,11 @@
 package com.rarnu.wxdb.browser.util
 
-import com.rarnu.kt.android.runCommand
 import java.io.File
 import java.security.MessageDigest
 
 object Utils {
 
-    fun hasRoot(): Boolean {
-        var ret = false
-        runCommand {
-            runAsRoot = true
-            commands.add("mount")
-            result { _, error ->
-                if (error.trim() == "") {
-                    ret = true
-                }
-            }
-        }
-        return ret
-    }
+    fun hasRoot() = arrayOf("/system/bin/su", "/system/xbin/su").any { File(it).exists() }
 
     fun readFile(path: String) = readFile(File(path))
 

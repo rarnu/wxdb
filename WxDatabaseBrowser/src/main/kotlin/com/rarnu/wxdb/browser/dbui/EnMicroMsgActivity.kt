@@ -4,8 +4,8 @@ import android.app.AlertDialog
 import android.graphics.BitmapFactory
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.rarnu.kt.android.alert
-import com.rarnu.kt.android.resStr
+import com.rarnu.android.alert
+import com.rarnu.android.resStr
 import com.rarnu.wxdb.browser.BaseTableActivity
 import com.rarnu.wxdb.browser.R
 import com.rarnu.wxdb.browser.database.DBUtils

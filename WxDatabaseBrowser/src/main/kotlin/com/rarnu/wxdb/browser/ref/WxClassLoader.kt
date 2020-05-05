@@ -3,8 +3,8 @@ package com.rarnu.wxdb.browser.ref
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
-import com.rarnu.kt.android.assetsIO
-import com.rarnu.kt.android.runOnMainThread
+import com.rarnu.android.assetsIO
+import com.rarnu.android.runOnMainThread
 import com.rarnu.wxdb.browser.util.Config
 import dalvik.system.DexClassLoader
 import java.io.File
@@ -23,6 +23,7 @@ object WxClassLoader {
 
         val wxPath7 = File(Config.basePath(), "wechat7.apk")
         if (!wxPath7.exists()) {
+
             ctx.assetsIO {
                 src = "wechat7.apk"
                 dest = wxPath7

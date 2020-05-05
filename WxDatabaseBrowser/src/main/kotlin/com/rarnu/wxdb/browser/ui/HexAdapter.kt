@@ -2,7 +2,7 @@ package com.rarnu.wxdb.browser.ui
 
 import android.content.Context
 import android.view.View
-import com.rarnu.kt.android.BaseAdapter
+import com.rarnu.android.BaseAdapter
 import com.rarnu.wxdb.browser.R
 import kotlinx.android.synthetic.main.item_hex.view.*
 import kotlin.math.abs

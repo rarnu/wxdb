@@ -24,13 +24,16 @@ object Alg {
         return str
     }
 
-    fun getUin(): String {
+    fun getUin() = try {
+        // 没有登录过微信的情况，此函数会报错
         var str = Utils.readFile(File(Config.basePath(), "uin.xml"))
         str = str.substring(str.indexOf("_auth_uin"))
         str = str.substring(0, str.indexOf("/>"))
         str = str.replace("_auth_uin", "").replace("value=", "")
         str = str.replace("\"", "").trim()
-        return str
+        str
+    } catch (th: Throwable) {
+        ""
     }
 
     fun getLoginAccount(): String {

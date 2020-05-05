@@ -8,8 +8,9 @@ class NewParser(private val bArr: ByteArray, private val clz: Class<*>?) {
 
     fun parseFrom(): ParseInfo {
         val ctx = clz?.newInstance()
-        val mLoad = clz?.superclass?.getDeclaredMethod("parseFrom", ByteArray::class.java)
-        mLoad?.isAccessible = true
+        val mLoad = clz?.superclass?.getDeclaredMethod("parseFrom", ByteArray::class.java)?.apply {
+            isAccessible = true
+        }
         val obj = mLoad?.invoke(ctx, bArr)
         val root = ParseInfo()
         parser(obj, clz, root)

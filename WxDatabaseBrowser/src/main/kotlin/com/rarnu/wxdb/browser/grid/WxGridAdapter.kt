@@ -7,8 +7,8 @@ import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.rarnu.kt.android.BaseAdapter
-import com.rarnu.kt.android.dip2px
+import com.rarnu.android.BaseAdapter
+import com.rarnu.android.dip2px
 import com.rarnu.wxdb.browser.R
 import com.rarnu.wxdb.browser.database.FieldData
 
@@ -35,25 +35,25 @@ class WxGridAdapter(ctx: Context, list: MutableList<List<FieldData>>) : BaseAdap
         fun setCell(list: List<FieldData>, position: Int) {
             baseLayout.removeAllViews()
             for (i in 0 until list.size) {
-                val txt = TextView(context)
-                val lp = LinearLayout.LayoutParams(75.dip2px(), LinearLayout.LayoutParams.MATCH_PARENT)
-                lp.rightMargin = 1
-                txt.layoutParams = lp
-                txt.gravity = Gravity.START or Gravity.CENTER_VERTICAL
-                txt.ellipsize = TextUtils.TruncateAt.END
-                txt.setSingleLine(true)
-                txt.maxLines = 1
-                txt.setPadding(2.dip2px(), 0, 2.dip2px(), 0)
-                txt.setBackgroundColor(if (position == 0) Color.LTGRAY else Color.WHITE)
-                txt.paint.isFakeBoldText = position == 0
-                txt.text = if (list[i].isBlob) "[BLOB]" else list[i].str
-                txt.isClickable = true
-                txt.setOnClickListener {
-                    if (position > 0) {
-                        listener?.onWxGridClick(position, i, list[i])
+                baseLayout.addView(TextView(context).apply {
+                    layoutParams = LinearLayout.LayoutParams(75.dip2px(), LinearLayout.LayoutParams.MATCH_PARENT).apply {
+                        rightMargin = 1
                     }
-                }
-                baseLayout.addView(txt)
+                    gravity = Gravity.START or Gravity.CENTER_VERTICAL
+                    ellipsize = TextUtils.TruncateAt.END
+                    setSingleLine(true)
+                    maxLines = 1
+                    setPadding(2.dip2px(), 0, 2.dip2px(), 0)
+                    setBackgroundColor(if (position == 0) Color.LTGRAY else Color.WHITE)
+                    paint.isFakeBoldText = position == 0
+                    text = if (list[i].isBlob) "[BLOB]" else list[i].str
+                    isClickable = true
+                    setOnClickListener {
+                        if (position > 0) {
+                            listener?.onWxGridClick(position, i, list[i])
+                        }
+                    }
+                })
             }
         }
     }

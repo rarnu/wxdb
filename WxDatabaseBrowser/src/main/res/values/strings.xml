@@ -59,6 +59,7 @@
     <string name="summary_loading">Loading...</string>
 
     <string name="toast_no_root">Device must be rooted before use the application.</string>
+    <string name="toast_login_wechat_first">You must login at least one WeChat account.</string>
 
     <string name="btn_first_page">First</string>
     <string name="btn_last_page">Last</string>

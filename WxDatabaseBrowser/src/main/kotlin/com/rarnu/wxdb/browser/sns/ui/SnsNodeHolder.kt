@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.item_node.view.*
 
 class SnsNodeHolder(context: Context?) : TreeNode.BaseNodeViewHolder<ParseInfo>(context) {
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "InflateParams")
     override fun createNodeView(node: TreeNode, value: ParseInfo): View {
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.item_node, null, false)

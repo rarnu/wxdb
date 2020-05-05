@@ -8,7 +8,7 @@ import android.preference.Preference
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import com.rarnu.kt.android.*
+import com.rarnu.android.*
 import com.rarnu.wxdb.browser.database.WxDatabasePrepare
 import com.rarnu.wxdb.browser.ref.WxClassLoader
 import com.rarnu.wxdb.browser.util.Config
@@ -36,7 +36,6 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
     private lateinit var prefPriority: Preference
     private lateinit var prefWxExpt: Preference
     private lateinit var prefWxFileIndex: Preference
-
 
     private val menuInfo = Menu.FIRST + 9
 
@@ -93,12 +92,10 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
         }
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>?, grantResults: IntArray?) {
-        if (grantResults != null && grantResults.isNotEmpty()) {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                permissionGranted = true
-                checkRootPermission()
-            }
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        if (grantResults.all { it == PackageManager.PERMISSION_GRANTED }) {
+            permissionGranted = true
+            checkRootPermission()
         }
     }
 
@@ -111,9 +108,14 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
             WxClassLoader.initClasses(this) {
                 if (readConfig(keyFirstStart, true)) {
                     Log.e("DB", "keyFirstStart")
-                    WxDatabasePrepare.refreshData {
-                        writeConfig(keyFirstStart, false)
-                        switchState(true)
+                    prefRefreshData.summary = resStr(R.string.summary_in_processing)
+                    WxDatabasePrepare.refreshData { succ ->
+                        if (succ) {
+                            writeConfig(keyFirstStart, false)
+                            switchState(true)
+                        } else {
+                            toast(resStr(R.string.toast_login_wechat_first))
+                        }
                     }
                 } else {
                     switchState(true)
@@ -124,9 +126,10 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menu.clear()
-        val mInfo = menu.add(0, menuInfo, 0, R.string.menu_info)
-        mInfo.setIcon(android.R.drawable.ic_menu_info_details)
-        mInfo.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+        menu.add(0, menuInfo, 0, R.string.menu_info).apply {
+            setIcon(android.R.drawable.ic_menu_info_details)
+            setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+        }
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -182,11 +185,8 @@ class MainActivity : PreferenceActivity(), Preference.OnPreferenceClickListener 
         return true
     }
 
-    private fun showData(name: String) {
-        val clz = Class.forName("$packageName.dbui.${name}Activity")
-        val inTable = Intent(this, clz)
-        startActivity(inTable)
-    }
+    private fun showData(name: String) = startActivity(Intent(this, Class.forName("$packageName.dbui.${name}Activity")))
+
 }
 
 

@@ -15,7 +15,7 @@ abstract class DbIntf(pwd: String? = null) {
 
     val dbName: String
         get() {
-            val path = mGetPath?.invoke(db) as? String
+            val path = mGetPath?.invoke(db) as? String ?: ""
             val f = File(path)
             return if (f.exists()) f.nameWithoutExtension else ""
         }
@@ -29,17 +29,19 @@ abstract class DbIntf(pwd: String? = null) {
             db?.javaClass?.getDeclaredMethod("rawQuery", String::class.java, Array<Any>::class.java)
         } catch (e: Throwable) {
             db?.javaClass?.getDeclaredMethod("rawQuery", String::class.java, Array<String>::class.java)
+        }?.apply {
+            isAccessible = true
         }
-        mQuery?.isAccessible = true
         mClose = try {
             db?.javaClass?.getDeclaredMethod("close")
         } catch (e: Throwable) {
             db?.javaClass?.superclass?.getDeclaredMethod("close")
+        }?.apply {
+            isAccessible = true
         }
-        mClose?.isAccessible = true
-
-        mGetPath = db?.javaClass?.getDeclaredMethod("getPath")
-        mGetPath?.isAccessible = true
+        mGetPath = db?.javaClass?.getDeclaredMethod("getPath")?.apply {
+            isAccessible = true
+        }
     }
 
     fun getTableList(): MutableList<String> {

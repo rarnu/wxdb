@@ -2,9 +2,9 @@ package com.rarnu.wxdb.browser
 
 import android.os.Bundle
 import android.preference.Preference
-import com.rarnu.kt.android.BackPreferenceActivity
-import com.rarnu.kt.android.resStr
-import com.rarnu.kt.android.runOnMainThread
+import com.rarnu.android.BackPreferenceActivity
+import com.rarnu.android.resStr
+import com.rarnu.android.runOnMainThread
 import com.rarnu.wxdb.browser.util.Alg
 import kotlin.concurrent.thread
 
@@ -20,7 +20,7 @@ class BaseInfoActivity: BackPreferenceActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        actionBar.title = resStr(R.string.title_base_info)
+        actionBar?.title = resStr(R.string.title_base_info)
     }
 
     override fun getPreferenceXml() = R.xml.baseinfo

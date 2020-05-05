@@ -1,15 +1,12 @@
 package com.rarnu.wxdb.browser
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.rarnu.kt.android.BackActivity
-import com.rarnu.kt.android.resStr
-import com.rarnu.kt.android.showActionBack
+import com.rarnu.android.BackActivity
+import com.rarnu.android.resStr
 import com.rarnu.wxdb.browser.database.DBUtils
 import com.rarnu.wxdb.browser.sns.ParseInfo
 import com.rarnu.wxdb.browser.sns.ui.SnsNodeHolder
@@ -24,17 +21,21 @@ class BlobActivity : BackActivity(), TreeNode.TreeNodeClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_blob)
-        actionBar.title = intent.getStringExtra("title")
+        actionBar?.title = intent.getStringExtra("title")
         val info = intent.getSerializableExtra("blobParseInfo") as ParseInfo
         root.addChild(info.toTree())
-        val treeView = AndroidTreeView(this, root)
-        treeView.setDefaultAnimation(true)
-        treeView.setUse2dScroll(true)
-        treeView.setDefaultViewHolder(SnsNodeHolder::class.java)
-        treeView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom)
+        val treeView = AndroidTreeView(this, root).apply {
+            setDefaultAnimation(true)
+            setUse2dScroll(true)
+            setDefaultViewHolder(SnsNodeHolder::class.java)
+            setDefaultContainerStyle(R.style.TreeNodeStyleCustom)
+
+        }
         layBlob.addView(treeView.view)
-        treeView.expandLevel(1)
-        treeView.setDefaultNodeClickListener(this)
+        with(treeView) {
+            expandLevel(1)
+            setDefaultNodeClickListener(this@BlobActivity)
+        }
     }
 
     override fun onClick(node: TreeNode?, value: Any?) {
@@ -42,18 +43,14 @@ class BlobActivity : BackActivity(), TreeNode.TreeNodeClickListener {
             if (value.fieldName == "Id" && value.fieldType == "java.lang.String" && value.fieldValue != null && value.fieldValue != "") {
                 DBUtils.findSnsImageFile(value.fieldValue) {
                     if (it != null) {
-                        val bmp = try {
-                            BitmapFactory.decodeFile(it.absolutePath)
-                        } catch (e: Throwable) {
-                            null
-                        }
+                        val bmp = try { BitmapFactory.decodeFile(it.absolutePath) } catch (e: Throwable) { null }
                         if (bmp != null) {
-                            val iv = ImageView(this)
-                            iv.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-                            iv.setImageBitmap(bmp)
                             AlertDialog.Builder(this)
                                     .setTitle(R.string.title_sns_image).setMessage(resStr(R.string.title_image_id, value.fieldValue))
-                                    .setView(iv).setPositiveButton(R.string.btn_ok, null).show()
+                                    .setView(ImageView(this).apply {
+                                        layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                                        setImageBitmap(bmp)
+                                    }).setPositiveButton(R.string.btn_ok, null).show()
                         }
                     }
                 }

@@ -12,31 +12,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ee3a65a-2de3-4545-bc59-1a6e51b033c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_rarnu_ktfunctional_0_8_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_rarnu_ktfunctional_0_7_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_8_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_8_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_13_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_13_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_io_commons_io_2_6_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_io_commons_io_2_6_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_compress_1_16_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_compress_1_16_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_7_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_7_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_2_6_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_2_6_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_0_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_0_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_27_0_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bmelnychuk_atv_1_2_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_rarnu_ktfunctional_0_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_tiagohm_MarkdownView_library_0_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_orhanobut_logger_1_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_8_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_13_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_ext_abbreviation_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_ext_attributes_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_ext_autolink_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_ext_footnotes_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_ext_gfm_strikethrough_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_ext_gfm_tasklist_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_ext_ins_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_ext_superscript_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_ext_tables_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_ext_typographic_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_formatter_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_vladsch_flexmark_flexmark_util_0_28_32_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_zetetic_android_database_sqlcipher_3_5_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_2_70_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_2_70_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_nibor_autolink_autolink_0_6_0_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/WxDatabaseBrowser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/WxDatabaseBrowser.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/AboutActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/AboutActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/AlgorithmActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/AlgorithmActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BaseInfoActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BaseInfoActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BaseTableActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BaseTableActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BlobActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BlobActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BlobHexActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BlobHexActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/SQLActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/SQLActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DBUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DBUtils.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbIntf.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbIntf.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/WxDatabasePrepare.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/WxDatabasePrepare.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/EnMicroMsgActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/EnMicroMsgActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/grid/WxGridAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/grid/WxGridAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/grid/WxGridView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/grid/WxGridView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/ref/WxClassLoader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/ref/WxClassLoader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/NewParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/NewParser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/ui/SnsNodeHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/ui/SnsNodeHolder.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/ui/HexAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/ui/HexAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/util/Alg.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/util/Alg.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/util/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/util/Utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wxdb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wxdb.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +84,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -56,102 +97,14 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbFavorite.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/ui/HexAdapter.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-              <folding>
-                <element signature="e#35#239#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/AboutActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BaseTableActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="131" column="52" selection-start-line="131" selection-start-column="52" selection-end-line="131" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/SQLActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-              <folding>
-                <element signature="e#32#426#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbEnMicroMsg.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/grid/WxGridAdapter.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="55" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/WxDatabaseBrowser.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/layout/item_cells.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -159,157 +112,19 @@
         <option value="valueResourceFile" />
         <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>hhhh</find>
-      <find>childlist</find>
-      <find>iLen</find>
-      <find>Adapter</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/NewParser.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbFavorite.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/FieldData.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/WxDatabasePrepare.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/FavoriteActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/util/Alg.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/layout/activity_sample.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/values/icons.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/layout/activity_blob.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/SampleActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/layout/item_node.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/values/style.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/xml/main.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/ui/SnsNode.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DBUtils.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbAuxData.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbAppBrandComm.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbCommonOne.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbEnMicroMsg.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbIndexMicroMsg.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbPriority.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbSnsMicroMsg.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbStory.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbWxExpt.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbWxFileIndex.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/MainActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/assets/about" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/ParseInfo.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/ui/SnsNodeHolder.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/xml/baseinfo.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/SnsMicroMsgActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/StoryActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/layout/item_hex.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/layout/activity_hexview.xml" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/build.gradle" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BlobActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/AlgorithmActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BaseInfoActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BlobHexActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/AboutActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/ui/HexAdapter.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/ref/WxClassLoader.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/grid/WxGridView.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbIntf.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/grid/WxGridAdapter.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BaseTableActivity.kt" />
-        <option value="$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/SQLActivity.kt" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1113" />
-  </component>
+  <component name="ProjectId" id="1bUA4FtGP4czKEyGA6aMi1uRLuX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="wxdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wxdb" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="wxdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wxdb" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="WxDatabaseBrowser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="wxdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wxdb" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="WxDatabaseBrowser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wxdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wxdb" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="WxDatabaseBrowser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wxdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wxdb" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="WxDatabaseBrowser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="jniLibs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wxdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wxdb" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="WxDatabaseBrowser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wxdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wxdb" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="WxDatabaseBrowser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wxdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wxdb" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="WxDatabaseBrowser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
-    <property name="DEBUGGABLE_DEVICE" value="oneplus-oneplus_a3000-17b01182" />
+    <property name="DEBUGGABLE_DEVICE" value="3a4041ba" />
     <property name="DEBUGGABLE_PROCESS" value="com.rarnu.wxdb.browser" />
     <property name="DEBUGGER_ID" value="Java" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -320,7 +135,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -345,8 +162,11 @@
     <configuration name="WxDatabaseBrowser" type="AndroidRunConfigurationType">
       <module name="WxDatabaseBrowser" />
       <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -360,6 +180,8 @@
       <Java />
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -432,467 +254,26 @@
       <workItem from="1549356504244" duration="12000" />
       <workItem from="1549462054923" duration="1773000" />
       <workItem from="1549464534321" duration="2000" />
+      <workItem from="1588676114723" duration="3349000" />
+      <workItem from="1588682055536" duration="4017000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36164000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1112" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Build Variants" order="3" side_tool="true" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Captures" order="7" />
-      <window_info id="UI Designer" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39960822" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50106496" side_tool="true" weight="0.32908913" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.32843137" />
-      <window_info anchor="bottom" id="Logcat" order="11" sideWeight="0.49946752" weight="0.32843137" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32908913" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="14" sideWeight="0.49893504" visible="true" weight="0.32843137" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Preview" order="5" weight="0.32960597" />
-      <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" />
-      <window_info anchor="right" id="Gradle" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info anchor="right" id="Capture Analysis" order="11" />
-      <window_info anchor="right" id="JuliaSciView" order="12" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/util/Alg.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Develop/android-sdk/sources/android-26/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="2673" column="26" selection-start-line="2673" selection-start-column="26" selection-end-line="2673" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Develop/android-sdk/sources/android-26/android/view/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17385">
-          <caret line="1355" column="7" lean-forward="true" selection-start-line="1355" selection-start-column="7" selection-end-line="1355" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/xml/baseinfo.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#215#240#0" expanded="true" />
-            <element signature="e#271#288#0" expanded="true" />
-            <element signature="e#303#322#0" expanded="true" />
-            <element signature="e#339#364#0" expanded="true" />
-            <element signature="e#395#413#0" expanded="true" />
-            <element signature="e#428#448#0" expanded="true" />
-            <element signature="e#465#490#0" expanded="true" />
-            <element signature="e#521#541#0" expanded="true" />
-            <element signature="e#556#578#0" expanded="true" />
-            <element signature="e#595#620#0" expanded="true" />
-            <element signature="e#651#674#0" expanded="true" />
-            <element signature="e#689#714#0" expanded="true" />
-            <element signature="e#731#756#0" expanded="true" />
-            <element signature="e#787#813#0" expanded="true" />
-            <element signature="e#828#856#0" expanded="true" />
-            <element signature="e#873#898#0" expanded="true" />
-            <element signature="e#929#954#0" expanded="true" />
-            <element signature="e#969#996#0" expanded="true" />
-            <element signature="e#1013#1038#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="71" column="34" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/layout/item_hex.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/layout/activity_hexview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BlobActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/AlgorithmActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#32#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BaseInfoActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#32#294#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="66" column="4" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
-          <folding>
-            <element signature="e#5877#5907#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BlobHexActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#32#230#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbIndexMicroMsg.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/ui/SnsNodeHolder.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/NewParser.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
-          <folding>
-            <element signature="e#36#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/sns/ParseInfo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="e#36#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/ref/WxClassLoader.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/AppBrandCommActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="e#37#209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/AuxDataActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/CommonOneActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/EnMicroMsgActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/FavoriteActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/IndexMicroMsgActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/SnsMicroMsgActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <element signature="e#37#169#0" expanded="true" />
-            <element signature="e#299#317#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/StoryActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/WxExptActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/dbui/WxFileIndexActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/WxDatabasePrepare.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="55" column="61" lean-forward="true" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/FieldData.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbWxFileIndex.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbWxExpt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DBUtils.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="68" column="25" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="25" />
-          <folding>
-            <element signature="e#41#272#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbStory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbSnsMicroMsg.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbPriority.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbIntf.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-727">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbCommonOne.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbAuxData.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbAppBrandComm.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/grid/WxGridView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbFavorite.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/ui/HexAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-          <folding>
-            <element signature="e#35#239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/BaseTableActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="131" column="52" selection-start-line="131" selection-start-column="52" selection-end-line="131" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/SQLActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-          <folding>
-            <element signature="e#32#426#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/database/DbEnMicroMsg.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/grid/WxGridAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="55" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/WxDatabaseBrowser.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/res/layout/item_cells.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WxDatabaseBrowser/src/main/kotlin/com/rarnu/wxdb/browser/AboutActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>

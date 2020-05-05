@@ -18,6 +18,7 @@ xcuserdata/
 projects/
 target/
 .gradle/
+.idea/
 local.properties
 gradle.properties
 

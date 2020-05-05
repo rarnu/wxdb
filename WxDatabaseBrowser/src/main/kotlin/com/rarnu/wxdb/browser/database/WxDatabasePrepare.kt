@@ -1,7 +1,7 @@
 package com.rarnu.wxdb.browser.database
 
 import android.annotation.SuppressLint
-import com.rarnu.kt.android.runOnMainThread
+import com.rarnu.android.runOnMainThread
 import com.rarnu.wxdb.browser.util.Config
 import com.rarnu.wxdb.browser.util.Alg
 import com.rarnu.wxdb.browser.util.Utils
@@ -28,36 +28,40 @@ object WxDatabasePrepare {
     private const val wxWxFileIndex = "WxFileIndex.db"
     private const val wxDeviceInfoCfg = wxDbDir + "CompatibleInfo.cfg"
 
-    fun refreshData(complete: () -> Unit) = thread {
+    fun refreshData(complete: (succ: Boolean) -> Unit) = thread {
         Utils.copyFile(wxUinPath, File(Config.basePath(), "uin.xml").absolutePath)
         Utils.copyFile(wxAccountPath, File(Config.basePath(), "account.xml").absolutePath)
         Utils.copyFile(wxDeviceInfoCfg, File(Config.basePath(), "device.cfg").absolutePath)
+        var ret = false
         val uin = Alg.getUin()
-        val md5 = Utils.md5Encode("mm$uin")
-        val contactPath = "$wxDbDir$md5/$wxContactDb"
-        val indexDb = "$wxDbDir$md5/$wxIndexDb"
-        val snsDb = "$wxDbDir$md5/$wxSnsDb"
-        val auxDb = "$wxDbDir$md5/$wxAuxDb"
-        val appBrandCommDb = "$wxDbDir$md5/$wxAppBrandComm"
-        val commonOneDb = "$wxDbDir$md5/$wxCommonOne"
-        val favoriteDb = "$wxDbDir$md5/$wxFavorite"
-        val priorityDb = "$wxDbDir$md5/$wxPriority"
-        val storyDb = "$wxDbDir$md5/$wxStory"
-        val wxExptDb = "$wxDbDir$md5/$wxWxExpt"
-        val wxFileIndexDb = "$wxDbDir$md5/$wxWxFileIndex"
-        Utils.copyFile(contactPath, File(Config.basePath(), "msg.db").absolutePath)
-        Utils.copyFile(indexDb, File(Config.basePath(), "index.db").absolutePath)
-        Utils.copyFile(snsDb, File(Config.basePath(), "sns.db").absolutePath)
-        Utils.copyFile(auxDb, File(Config.basePath(), "aux.db").absolutePath)
-        Utils.copyFile(appBrandCommDb, File(Config.basePath(), "appbrandcomm.db").absolutePath)
-        Utils.copyFile(commonOneDb, File(Config.basePath(), "commonone.db").absolutePath)
-        Utils.copyFile(favoriteDb, File(Config.basePath(), "favorite.db").absolutePath)
-        Utils.copyFile(priorityDb, File(Config.basePath(), "priority.db").absolutePath)
-        Utils.copyFile(storyDb, File(Config.basePath(), "story.db").absolutePath)
-        Utils.copyFile(wxExptDb, File(Config.basePath(), "wxexpt.db").absolutePath)
-        Utils.copyFile(wxFileIndexDb, File(Config.basePath(), "wxfileindex.db").absolutePath)
+        if (uin != "") {
+            val md5 = Utils.md5Encode("mm$uin")
+            val contactPath = "$wxDbDir$md5/$wxContactDb"
+            val indexDb = "$wxDbDir$md5/$wxIndexDb"
+            val snsDb = "$wxDbDir$md5/$wxSnsDb"
+            val auxDb = "$wxDbDir$md5/$wxAuxDb"
+            val appBrandCommDb = "$wxDbDir$md5/$wxAppBrandComm"
+            val commonOneDb = "$wxDbDir$md5/$wxCommonOne"
+            val favoriteDb = "$wxDbDir$md5/$wxFavorite"
+            val priorityDb = "$wxDbDir$md5/$wxPriority"
+            val storyDb = "$wxDbDir$md5/$wxStory"
+            val wxExptDb = "$wxDbDir$md5/$wxWxExpt"
+            val wxFileIndexDb = "$wxDbDir$md5/$wxWxFileIndex"
+            Utils.copyFile(contactPath, File(Config.basePath(), "msg.db").absolutePath)
+            Utils.copyFile(indexDb, File(Config.basePath(), "index.db").absolutePath)
+            Utils.copyFile(snsDb, File(Config.basePath(), "sns.db").absolutePath)
+            Utils.copyFile(auxDb, File(Config.basePath(), "aux.db").absolutePath)
+            Utils.copyFile(appBrandCommDb, File(Config.basePath(), "appbrandcomm.db").absolutePath)
+            Utils.copyFile(commonOneDb, File(Config.basePath(), "commonone.db").absolutePath)
+            Utils.copyFile(favoriteDb, File(Config.basePath(), "favorite.db").absolutePath)
+            Utils.copyFile(priorityDb, File(Config.basePath(), "priority.db").absolutePath)
+            Utils.copyFile(storyDb, File(Config.basePath(), "story.db").absolutePath)
+            Utils.copyFile(wxExptDb, File(Config.basePath(), "wxexpt.db").absolutePath)
+            Utils.copyFile(wxFileIndexDb, File(Config.basePath(), "wxfileindex.db").absolutePath)
+            ret = true
+        }
 
-        runOnMainThread { complete() }
+        runOnMainThread { complete(ret) }
     }
 
 }

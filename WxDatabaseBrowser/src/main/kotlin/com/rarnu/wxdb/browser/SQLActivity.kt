@@ -1,14 +1,15 @@
 package com.rarnu.wxdb.browser
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import com.rarnu.kt.android.BackActivity
-import com.rarnu.kt.android.BaseAdapter
-import com.rarnu.kt.android.resStr
+import com.rarnu.android.BackActivity
+import com.rarnu.android.BaseAdapter
+import com.rarnu.android.resStr
 import kotlinx.android.synthetic.main.activity_sql.*
 import kotlinx.android.synthetic.main.item_field_name.view.*
 
@@ -20,10 +21,11 @@ class SQLActivity: BackActivity() {
 
     private val menuRun = Menu.FIRST + 10
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sql)
-        actionBar.title = resStr(R.string.menu_sql)
+        actionBar?.title = resStr(R.string.menu_sql)
         tableName = intent.getStringExtra("table")
         tableFields.addAll(intent.getStringArrayExtra("field"))
         tvSelect.text = "SELECT * FROM $tableName WHERE"
@@ -53,18 +55,19 @@ class SQLActivity: BackActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val mRun = menu.add(0, menuRun, 0, R.string.menu_exec_sql)
-        mRun.setIcon(android.R.drawable.ic_menu_send)
-        mRun.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+        menu.add(0, menuRun, 0, R.string.menu_exec_sql).apply {
+            setIcon(android.R.drawable.ic_menu_send)
+            setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+        }
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             menuRun -> {
-                val inRet = Intent()
-                inRet.putExtra("sql", buildSQL())
-                setResult(RESULT_OK, inRet)
+                setResult(RESULT_OK, Intent().apply {
+                    putExtra("sql", buildSQL())
+                })
                 finish()
             }
         }
