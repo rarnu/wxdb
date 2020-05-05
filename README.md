@@ -2,6 +2,8 @@ Wechat Database Browser
 
 **<font color=red>Support Wechat 7.0!!</font>**
 
+Tested on ROOTED XiaoMi 9 Pro and RedMi K30 Pro
+
 - - -
 
 Help for reading the data in Wechat.
